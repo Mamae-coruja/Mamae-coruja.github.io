@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mamãe Coruja — o app da mãe de primeira viagem</title>
+<meta name="description" content="Do primeiro dia em casa ao primeiro aniversário: o próximo passo para você e o seu bebê, todos os dias. Até às 3h da manhã."><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnM0I3QkI4IiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjOENDMkVDIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjM0I3QkI4Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyNCIgZmlsbD0idXJsKCNnM0I3QkI4KSIvPjxwYXRoIGQ9Ik0yMSA0NCBMMjUgMTcgTDM5IDMwIFE1MCAyNiA2MSAzMCBMNzUgMTcgTDc5IDQ0IFE4NCA4NCA1MCA4OCBRMTYgODQgMjEgNDQgWiIgZmlsbD0iI0ZGRkRGOSIvPjxjaXJjbGUgY3g9IjM4LjUiIGN5PSI0NCIgcj0iMTAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI0U2RTFEQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MS41IiBjeT0iNDQiIHI9IjEwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNFNkUxREEiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGNpcmNsZSBjeD0iNDAiIGN5PSI0NSIgcj0iNSIgZmlsbD0iIzJFMkEzMyIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iNDUiIHI9IjUiIGZpbGw9IiMyRTJBMzMiLz48Y2lyY2xlIGN4PSI0MS42IiBjeT0iNDMuMiIgcj0iMS42IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iNjEuNiIgY3k9IjQzLjIiIHI9IjEuNiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik00Ni41IDUzIEw1My41IDUzIEw1MCA1OSBaIiBmaWxsPSIjRjJBNjVBIi8+PGVsbGlwc2UgY3g9IjUwIiBjeT0iNzMiIHJ4PSIxMyIgcnk9IjExIiBmaWxsPSIjQ0ZFNEY2Ii8+PHBhdGggZD0iTTM5LjUgNjYgTDQxIDYwIEw0NSA2NC41IFogTTYwLjUgNjYgTDU5IDYwIEw1NSA2NC41IFoiIGZpbGw9IiNDRkU0RjYiLz48cGF0aCBkPSJNNDMgNzEgcTIuNSAyLjUgNSAwIE01MiA3MSBxMi41IDIuNSA1IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNCN0JCOCIgc3Ryb2tlLXdpZHRoPSIxLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik00OC42IDc0LjUgTDUxLjQgNzQuNSBMNTAgNzcgWiIgZmlsbD0iI0YyQTY1QSIvPjxwYXRoIGQ9Ik0yMyA1NCBRMjEgNzggNDMgODQgUTM1IDc0IDM2IDYyIFoiIGZpbGw9IiNFQ0U2REUiLz48cGF0aCBkPSJNNzcgNTQgUTc5IDc4IDU3IDg0IFE2NSA3NCA2NCA2MiBaIiBmaWxsPSIjRUNFNkRFIi8+PC9zdmc+"><link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnM0I3QkI4IiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjOENDMkVDIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjM0I3QkI4Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyNCIgZmlsbD0idXJsKCNnM0I3QkI4KSIvPjxwYXRoIGQ9Ik0yMSA0NCBMMjUgMTcgTDM5IDMwIFE1MCAyNiA2MSAzMCBMNzUgMTcgTDc5IDQ0IFE4NCA4NCA1MCA4OCBRMTYgODQgMjEgNDQgWiIgZmlsbD0iI0ZGRkRGOSIvPjxjaXJjbGUgY3g9IjM4LjUiIGN5PSI0NCIgcj0iMTAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI0U2RTFEQSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MS41IiBjeT0iNDQiIHI9IjEwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNFNkUxREEiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGNpcmNsZSBjeD0iNDAiIGN5PSI0NSIgcj0iNSIgZmlsbD0iIzJFMkEzMyIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iNDUiIHI9IjUiIGZpbGw9IiMyRTJBMzMiLz48Y2lyY2xlIGN4PSI0MS42IiBjeT0iNDMuMiIgcj0iMS42IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iNjEuNiIgY3k9IjQzLjIiIHI9IjEuNiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik00Ni41IDUzIEw1My41IDUzIEw1MCA1OSBaIiBmaWxsPSIjRjJBNjVBIi8+PGVsbGlwc2UgY3g9IjUwIiBjeT0iNzMiIHJ4PSIxMyIgcnk9IjExIiBmaWxsPSIjQ0ZFNEY2Ii8+PHBhdGggZD0iTTM5LjUgNjYgTDQxIDYwIEw0NSA2NC41IFogTTYwLjUgNjYgTDU5IDYwIEw1NSA2NC41IFoiIGZpbGw9IiNDRkU0RjYiLz48cGF0aCBkPSJNNDMgNzEgcTIuNSAyLjUgNSAwIE01MiA3MSBxMi41IDIuNSA1IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNCN0JCOCIgc3Ryb2tlLXdpZHRoPSIxLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik00OC42IDc0LjUgTDUxLjQgNzQuNSBMNTAgNzcgWiIgZmlsbD0iI0YyQTY1QSIvPjxwYXRoIGQ9Ik0yMyA1NCBRMjEgNzggNDMgODQgUTM1IDc0IDM2IDYyIFoiIGZpbGw9IiNFQ0U2REUiLz48cGF0aCBkPSJNNzcgNTQgUTc5IDc4IDU3IDg0IFE2NSA3NCA2NCA2MiBaIiBmaWxsPSIjRUNFNkRFIi8+PC9zdmc+"><meta property="og:type" content="website"><meta property="og:site_name" content="Mamãe Coruja"><meta property="og:title" content="Mamãe Coruja — o app da mãe de primeira viagem"><meta property="og:description" content="Do primeiro dia em casa ao primeiro aniversário: o próximo passo para o seu bebê, na palma da mão. Até às 3h da manhã."><meta property="og:url" content="https://mamae-coruja.github.io/quiz/vendas"><meta property="og:image" content="https://mamae-coruja.github.io/quiz/img/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><script>window.dataLayer=window.dataLayer||[];function rastrear(ev,p,custom){p=p||{};try{dataLayer.push(Object.assign({event:ev},p))}catch(e){}try{if(window.fbq)fbq(custom?'trackCustom':'track',ev,p)}catch(e){}}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-plano]');if(a)rastrear('InitiateCheckout',{value:+a.getAttribute('data-valor')||0,currency:'BRL',content_name:'Mamãe Coruja '+a.getAttribute('data-plano')})});</script>
+<meta name="theme-color" content="#141C35">
+<meta property="og:title" content="Mamãe Coruja — o app da mãe de primeira viagem">
+<meta property="og:description" content="Você não precisa saber tudo. Só precisa saber o próximo passo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+ --noite:#141C35;--noite2:#1E2A4E;--noite3:#2B3B6B;--lua:#F7DFA0;--lua2:#FFF3CF;
+ --aurora1:#F8C9B8;--aurora2:#FBE2D6;--dia:#FFFBF6;--creme:#FFF5EA;
+ --ink:#1E2742;--mut:#5E6883;--line:#EBDFD3;
+ --azul:#5B9BD5;--azul2:#3B7BB8;--rosa:#E07399;--rosa2:#C2557C;
+ --cta1:#FF7B5C;--cta2:#E4507E;
+ --serif:'Fraunces',Georgia,serif;--sans:'Nunito',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--dia);color:var(--ink);font:400 18px/1.6 var(--sans);-webkit-text-size-adjust:100%;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;margin:0;text-wrap:balance}
+h1{font-size:clamp(38px,8.6vw,68px);line-height:1.02}
+h2{font-size:clamp(30px,6.2vw,48px);line-height:1.06}
+h3{font-size:clamp(21px,4.4vw,25px);line-height:1.2}
+p{margin:0 0 14px}
+em{font-style:italic;color:inherit}
+.w{width:min(1120px,100% - 40px);margin:0 auto}
+.narrow{width:min(760px,100% - 40px);margin:0 auto}
+.kick{display:inline-flex;align-items:center;gap:8px;font:800 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+.kick:before{content:'';width:26px;height:2px;background:currentColor;opacity:.6}
+.lead{font-size:clamp(19px,3.6vw,22px);line-height:1.55}
+
+/* CTA */
+.cta{display:inline-flex;flex-direction:column;align-items:center;gap:3px;padding:20px 34px;border-radius:999px;background:linear-gradient(120deg,var(--cta1),var(--cta2));color:#fff;text-decoration:none;font:900 19px/1.15 var(--sans);box-shadow:0 14px 34px rgba(228,80,126,.38),inset 0 -3px 0 rgba(0,0,0,.12);transition:transform .2s,box-shadow .2s;text-align:center}
+.cta small{font:700 13.5px/1.2 var(--sans);opacity:.92}
+.cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(228,80,126,.45)}
+.cta.full{display:flex;width:100%;max-width:460px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:14.5px;font-weight:700}
+.trust span{display:inline-flex;align-items:center;gap:7px}
+.trust span:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--lua)}
+
+/* Celular */
+.ph{margin:0;position:relative;container-type:inline-size}
+.ph .fr{position:relative;border-radius:16cqw;padding:3.8cqw;background:linear-gradient(150deg,#59628A,#1C2344 42%,#0A0F1F);box-shadow:inset 0 0 0 1.5px #6A739A,inset 0 0 0 4px #141A33,0 30px 60px rgba(8,12,30,.38),0 8px 18px rgba(8,12,30,.2)}
+.ph .fr:before{content:'';position:absolute;right:-1.1cqw;top:27%;width:1.3cqw;height:13%;border-radius:0 2cqw 2cqw 0;background:linear-gradient(90deg,#1C2344,#3A4268)}
+.ph .fr:after{content:'';position:absolute;left:-1.1cqw;top:21%;width:1.3cqw;height:7%;border-radius:2cqw 0 0 2cqw;background:linear-gradient(270deg,#1C2344,#3A4268);box-shadow:0 11cqw 0 #2A3152}
+.ph .sc{position:relative;border-radius:12.4cqw;overflow:hidden;background:#FFFBF6;aspect-ratio:9/19.3;display:flex;flex-direction:column}
+.ph .sc:after{content:'';position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,.22),rgba(255,255,255,0) 32%);pointer-events:none}
+.ph .sb{flex:0 0 auto;height:11.5cqw;display:flex;align-items:center;justify-content:space-between;padding:0 8cqw;font:800 4.4cqw/1 var(--sans);color:#1E2742;position:relative}
+.ph .il{position:absolute;left:50%;top:3cqw;transform:translateX(-50%);width:29cqw;height:7.4cqw;border-radius:99px;background:#05070F}
+.ph .bt{width:7.6cqw;height:3.8cqw;border:1.4px solid currentColor;border-radius:1.2cqw;position:relative;opacity:.85}
+.ph .bt:after{content:'';position:absolute;left:1px;top:1px;bottom:1px;right:28%;background:currentColor;border-radius:.6cqw}
+.ph img{flex:1;min-height:0;width:100%;object-fit:cover;object-position:top;display:block}
+.ph.dk .sc{background:#141C35}.ph.dk .sb{color:#fff}
+
+/* ===== 1. NOITE ===== */
+.noite{position:relative;background:radial-gradient(120% 70% at 75% 10%,var(--noite3) 0%,var(--noite2) 40%,var(--noite) 80%);color:#EEF1FA;overflow:hidden}
+.stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.moon{position:absolute;width:min(46vw,420px);aspect-ratio:1;right:-6%;top:-8%;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--lua2) 0%,var(--lua) 45%,rgba(247,223,160,0) 70%);opacity:.55;filter:blur(2px);pointer-events:none}
+.top{position:relative;z-index:2;display:flex;align-items:center;gap:12px;padding:22px 0}
+.top svg{width:42px;height:42px;border-radius:12px}
+.top b{font:600 22px var(--serif);color:#fff}
+.hero{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:20px 0 90px}
+.hero .kick{color:var(--lua)}
+.hero h1{color:#fff}
+.hero h1 em{color:var(--lua);font-weight:600}
+.hero .lead{color:#C9D1E8;margin:22px 0 30px;max-width:560px}
+.hero .trust{color:#C9D1E8}
+.hero-vis{position:relative;display:flex;justify-content:center}
+.hero-vis .ph{width:min(300px,78%);transform:rotate(-3deg)}
+.hero-vis .owl{position:absolute;width:118px;right:4%;bottom:-14px;filter:drop-shadow(0 12px 24px rgba(0,0,0,.4));transform:rotate(6deg)}
+.hero-vis .clock{position:absolute;left:0;top:12%;background:rgba(255,255,255,.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:12px 16px;font:600 30px var(--serif);color:var(--lua)}
+.hero-vis .clock small{display:block;font:700 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#C9D1E8}
+
+/* Cenas */
+.cenas{position:relative;z-index:2;padding:30px 0 110px}
+.cenas h2{color:#fff;max-width:760px}
+.cenas .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0 46px}
+.cena{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:22px 22px 20px}
+.cena time{display:block;font:600 34px/1 var(--serif);color:var(--lua);margin-bottom:12px}
+.cena p{margin:0;color:#DCE2F2;font-size:17px}
+.respira{max-width:760px;font:400 clamp(22px,4.6vw,30px)/1.35 var(--serif);color:#fff}
+.respira b{color:var(--lua);font-weight:600}
+
+/* ===== 2. AMANHECER ===== */
+.aurora{background:linear-gradient(180deg,var(--noite) 0%,#3E3F6E 9%,#9C7397 22%,var(--aurora1) 40%,var(--aurora2) 62%,var(--dia) 100%);padding:120px 0 90px}
+.aurora .kick{color:#7A3E5C}
+.probs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:44px 0}
+.prob{background:rgba(255,255,255,.72);backdrop-filter:blur(6px);border-radius:24px;padding:26px;border:1px solid rgba(255,255,255,.8)}
+.prob .n{font:600 46px/1 var(--serif);color:var(--cta2);opacity:.9}
+.prob h3{margin:10px 0 8px}
+.prob p{margin:0;color:var(--mut);font-size:17px}
+.virada{background:var(--ink);color:#fff;border-radius:30px;padding:clamp(28px,5vw,48px);display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+.virada svg{width:92px}
+.virada p{margin:0;font:400 clamp(21px,4vw,27px)/1.35 var(--serif)}
+.virada b{color:var(--lua);font-weight:600}
+
+/* ===== 3. MÉTODO ===== */
+.metodo{padding:100px 0}
+.camadas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.camada{background:#fff;border-radius:30px;padding:26px 24px 0;border:1px solid var(--line);box-shadow:0 18px 44px rgba(30,39,66,.08);overflow:hidden;display:flex;flex-direction:column}
+.camada .num{font:800 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--azul2)}
+.camada:nth-child(2) .num{color:var(--rosa2)}
+.camada:nth-child(3) .num{color:var(--cta2)}
+.camada h3{margin:8px 0 8px}
+.camada p{color:var(--mut);font-size:16.5px}
+.camada .ph{width:78%;margin:12px auto -60px;border-radius:38px;padding:7px}
+
+.trilha{margin:70px auto 0;max-width:960px}
+.trilha svg{width:100%;height:auto}
+
+.trilha-m{display:none;list-style:none;padding:0;margin:44px 0 0;position:relative}
+.trilha-m:before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:3px;border-radius:3px;background:linear-gradient(var(--azul),var(--rosa))}
+.trilha-m li{position:relative;padding:0 0 18px 34px;color:var(--mut);font-size:16px}
+.trilha-m li:before{content:'';position:absolute;left:2px;top:5px;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--rosa)}
+.trilha-m b{display:block;font:600 22px/1.1 var(--serif);color:var(--ink)}
+/* ===== 4. PROVAS ===== */
+.provas{background:var(--creme);padding:100px 0}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:44px 0}
+.numb{background:#fff;border-radius:24px;padding:24px 18px;text-align:center;border:1px solid var(--line)}
+.numb b{display:block;font:600 clamp(44px,8vw,62px)/1 var(--serif);background:linear-gradient(120deg,var(--azul2),var(--rosa2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.numb span{display:block;margin-top:8px;font-weight:800;font-size:15px;color:var(--mut)}
+.base{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.box{background:#fff;border-radius:26px;padding:28px;border:1px solid var(--line)}
+.box h3{margin-bottom:14px}
+.chk{list-style:none;padding:0;margin:0}
+.chk li{position:relative;padding:9px 0 9px 36px;border-bottom:1px solid #F3EAE0;font-size:17px}
+.chk li:last-child{border:0}
+.chk li:before{content:'';position:absolute;left:0;top:11px;width:24px;height:24px;border-radius:50%;background:#E6F5EE url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314804F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/14px no-repeat}
+.chk.no li:before{background:#FBE7EC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C2557C' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center/12px no-repeat}
+
+/* ===== 5. UM DIA ===== */
+.dia{padding:100px 0;background:linear-gradient(180deg,var(--dia),#FFF1E6 70%,#F3E6F2)}
+.linha{position:relative;margin-top:50px}
+.linha:before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--line),#E7CFE0);transform:translateX(-50%)}
+.mom{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-bottom:60px}
+.mom:after{content:'';position:absolute;left:50%;top:50%;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid var(--cta2);transform:translate(-50%,-50%)}
+.mom .txt time{display:block;font:600 clamp(48px,9vw,72px)/1 var(--serif);color:var(--ink)}
+.mom .txt time.n{color:var(--noite3)}
+.mom .txt h3{margin:10px 0 8px}
+.mom .txt p{color:var(--mut);margin:0}
+.mom .ph{width:min(260px,100%);margin:0 auto}
+.mom:nth-child(even) .txt{order:2}
+.mom.night{background:var(--noite);border-radius:34px;padding:34px;color:#fff;margin-left:-34px;margin-right:-34px}
+.mom.night:after{display:none}
+.mom.night .txt time{color:var(--lua)}
+.mom.night .txt p{color:#C9D1E8}
+
+/* ===== 6. MÃE ===== */
+.mae{padding:100px 0;background:#F3E6F2}
+.mae .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.mae .ph{width:min(290px,90%);margin:0 auto}
+.mae blockquote{margin:0 0 22px;font:400 clamp(24px,4.8vw,34px)/1.3 var(--serif);color:var(--rosa2)}
+.mae .chk li{font-size:17px}
+
+/* ===== 7. FUTURO ===== */
+.futuro{padding:110px 0;background:linear-gradient(180deg,#F3E6F2,var(--dia))}
+.futuro .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.futuro .lead{color:var(--mut)}
+.futuro .cards{position:relative;height:520px}
+.futuro .cards .cartao{position:absolute;width:62%;right:2%;top:0;border-radius:18px;box-shadow:0 24px 50px rgba(30,39,66,.22);transform:rotate(5deg)}
+.futuro .cards .ph{position:absolute;width:52%;left:2%;bottom:0;transform:rotate(-4deg)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.duo div{border-radius:22px;padding:18px;color:#fff;display:flex;align-items:center;gap:12px;font-weight:800}
+.duo svg{width:42px;height:42px;border-radius:12px;flex:0 0 auto;background:rgba(255,255,255,.2)}
+
+/* ===== 8. OFERTA ===== */
+/* efeitos */
+.cta{position:relative;overflow:hidden;isolation:isolate}
+.cta:after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:brilho 3.6s ease-in-out infinite;z-index:-1}
+@keyframes brilho{0%,60%{left:-60%}100%{left:130%}}
+.cta.pulse{animation:pulso 2.4s ease-in-out infinite}
+@keyframes pulso{0%,100%{box-shadow:0 14px 34px rgba(228,80,126,.38),0 0 0 0 rgba(255,123,92,.45)}50%{box-shadow:0 14px 34px rgba(228,80,126,.38),0 0 0 14px rgba(255,123,92,0)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.moon{animation:lua 9s ease-in-out infinite alternate}
+@keyframes lua{to{transform:translateY(18px) scale(1.04);opacity:.7}}
+.stars circle{animation:pisca 3s ease-in-out infinite alternate}
+.stars circle:nth-child(3n){animation-delay:1s}.stars circle:nth-child(4n){animation-delay:2s}
+@keyframes pisca{to{opacity:.15}}
+.mom .ph,.mae .ph{transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .8s}
+.mom .ph:hover,.mae .ph:hover{transform:translateY(-6px) rotate(-1deg)}
+.tudo{padding:100px 0 90px;background:linear-gradient(180deg,var(--dia),var(--creme))}
+.tudo .c0{margin:0 auto;text-align:center}
+.tudo .c0 .kick:before{display:none}
+.nao-paga{text-align:center;color:#C9D1E8;font:500 clamp(22px,4.4vw,30px)/1.35 var(--serif);margin:0 0 18px}
+.vl{list-style:none;margin:0;padding:0}
+.vl li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid #F3EAE0;font-size:16.5px}
+.vl li s{color:var(--mut);white-space:nowrap;font-weight:700}
+.vl li em{font-style:normal;font:800 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;background:#FBE2E9;color:var(--rosa2);padding:3px 8px;border-radius:99px;margin-left:4px;vertical-align:2px}
+.pack .tot{margin:14px 0 0;text-align:right;font-weight:800;color:var(--mut)}
+.pack .tot s{font:600 26px var(--serif);color:var(--ink);margin-left:6px}
+.pack .hoje{font-weight:800;color:var(--mut);margin:0 0 6px;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+.oferta{padding:110px 0;background:var(--noite);color:#fff;position:relative;overflow:hidden}
+.oferta .stars{opacity:.6}
+.oferta .w{position:relative;z-index:2}
+.oferta h2{color:#fff;text-align:center}
+.oferta .sub{text-align:center;color:#C9D1E8;margin:14px auto 0;max-width:620px}
+.pack{display:grid;grid-template-columns:1.2fr .8fr;gap:0;margin:50px auto 0;max-width:980px;background:#fff;color:var(--ink);border-radius:34px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.35)}
+.pack .inc{padding:38px}
+.pack .inc h3{margin-bottom:16px}
+.pack .preco{background:linear-gradient(170deg,#FFF6EC,#FBE2E9);padding:38px 30px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.pack .v{font:600 clamp(70px,14vw,96px)/.9 var(--serif);color:var(--ink)}
+.pack .v sup{font-size:.34em;vertical-align:top;position:relative;top:.5em;margin-right:4px}
+.pack .v small{font:700 20px var(--sans);color:var(--mut)}
+.pack .dia1{font-weight:800;color:var(--rosa2);margin:10px 0 22px;font-size:17px}
+.pack .renova{font-size:13.5px;color:var(--mut);margin:16px 0 0}
+.pilha{display:grid;gap:12px;max-width:900px;margin:44px auto 0}
+.pilha .it{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:16px 22px 16px 16px;box-shadow:0 8px 24px rgba(30,39,66,.05);transition:transform .25s,box-shadow .25s}
+.pilha .it:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(30,39,66,.1)}
+.ico{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:32px;background:linear-gradient(140deg,var(--c1),var(--c2));box-shadow:0 8px 18px color-mix(in srgb,var(--c2) 35%,transparent),inset 0 -3px 0 rgba(0,0,0,.08)}
+.pilha .num{font:800 12px var(--sans);letter-spacing:.12em;color:var(--azul2)}
+.pilha h3{margin:2px 0 4px;font-size:clamp(19px,3.8vw,22px)}
+.pilha p{margin:0;color:var(--mut);font-size:16px;line-height:1.45}
+.pilha .val{text-align:right;font:600 24px var(--serif);color:var(--ink);white-space:nowrap}
+.pilha .val small{display:block;font:800 11px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.bonus-t{text-align:center;margin:46px 0 0}
+.bonus-t span{display:inline-block;background:linear-gradient(120deg,#F6C453,#E9A23B);color:#3A2400;font:900 14px var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:10px 20px;border-radius:99px;box-shadow:0 10px 24px rgba(233,162,59,.35)}
+.bons{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:900px;margin:22px auto 0}
+.bon-c{position:relative;display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start;padding:34px 22px 22px;border-radius:26px;background:linear-gradient(140deg,#FFF9E8,#FFEFD2);border:2px solid #F1C76A;box-shadow:0 18px 40px rgba(233,162,59,.22)}
+.bon-c .rib{position:absolute;top:-14px;left:22px;background:linear-gradient(120deg,#F6C453,#E9A23B);color:#3A2400;font:900 12.5px var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:99px}
+.ico.ouro{--c1:#FFE08A;--c2:#E9A23B}
+.bon-c h3{font-size:21px;margin:2px 0 6px}
+.bon-c p{margin:0;color:#6B5A3A;font-size:15.5px}
+.bon-c .val{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;border-top:1px dashed #E9CF95;padding-top:12px;margin-top:4px}
+.bon-c .val s{color:#C0392B;font:800 18px var(--sans);text-decoration-thickness:2px}
+.bon-c .val b{background:#14804F;color:#fff;font:900 15px var(--sans);letter-spacing:.08em;padding:7px 14px;border-radius:99px}
+.soma{max-width:900px;margin:40px auto 0;text-align:center;background:linear-gradient(140deg,#1E2A4E,#2B2550);color:#fff;border-radius:30px;padding:32px 26px}
+.soma small{display:block;font:800 13px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#C9D1E8}
+.soma b{display:block;font:600 clamp(54px,12vw,80px)/1 var(--serif);color:var(--lua);margin:10px 0}
+.soma p{margin:0 auto;max-width:520px;color:#C9D1E8}
+.pack1{max-width:760px;margin:44px auto 0;background:#fff;color:var(--ink);border-radius:30px;padding:30px 30px 24px;box-shadow:0 40px 80px rgba(0,0,0,.35)}
+.pack1 h3{margin-bottom:14px}
+.pack1 .vl li s{color:#D64545;text-decoration-thickness:2px}
+.pack1 .tot{font-size:18px}
+.pack1 .tot s{color:#D64545;text-decoration-thickness:3px}
+.queda{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;max-width:760px;margin:30px auto 0;padding:22px;border-radius:28px;background:linear-gradient(120deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);position:relative}
+.queda small{display:block;font:800 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#C9D1E8;margin-bottom:4px}
+.queda .q1 s{font:600 34px var(--serif);color:#FF8A8A;text-decoration-thickness:3px}
+.queda .seta{font-size:30px;color:var(--lua)}
+.queda .q2 b{display:block;font:600 52px/1 var(--serif);color:var(--lua)}
+.queda .q2 em{font:800 14px var(--sans);font-style:normal;color:#9FE3C2}
+.queda .off{background:linear-gradient(120deg,#22C55E,#14804F);color:#fff;font:900 26px var(--sans);padding:12px 18px;border-radius:20px;transform:rotate(-6deg);box-shadow:0 12px 30px rgba(20,128,79,.45)}
+.escolha{text-align:center;color:var(--lua);font:600 clamp(24px,5vw,32px)/1.2 var(--serif);margin:52px 0 0}
+.escolha small{display:block;color:#C9D1E8;font:700 16px var(--sans);margin-top:8px}
+.planos{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:18px;align-items:center;max-width:1060px;margin:34px auto 0}
+.plano{position:relative;background:#fff;color:var(--ink);border-radius:30px;padding:28px 24px 24px;box-shadow:0 24px 60px rgba(0,0,0,.28);transition:transform .25s}
+.plano:hover{transform:translateY(-4px)}
+.plano.dest{border:3px solid #F6C453;padding:42px 26px 28px;background:linear-gradient(180deg,#FFFBEF,#fff 38%);box-shadow:0 30px 80px rgba(246,196,83,.35),0 0 0 8px rgba(246,196,83,.15)}
+.plano .fita{position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:linear-gradient(120deg,#F6C453,#E9A23B);color:#3A2400;font:900 13.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:10px 20px;border-radius:99px;white-space:nowrap;box-shadow:0 10px 24px rgba(233,162,59,.45)}
+.plano .cab-p{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.plano h3{font-size:26px;margin:0}
+.plano .pct{background:#D64545;color:#fff;font:900 15px var(--sans);padding:6px 11px;border-radius:12px;transform:rotate(4deg)}
+.plano .de{margin:12px 0 0;font:700 15px var(--sans);color:var(--mut);min-height:22px}
+.plano .de s{color:#D64545;text-decoration-thickness:2px;font-weight:800}
+.plano .pr{display:flex;align-items:baseline;gap:6px;margin:2px 0 4px}
+.plano .pr b{font:600 clamp(46px,8vw,56px)/1 var(--serif);letter-spacing:-.02em}
+.plano.dest .pr b{background:linear-gradient(120deg,var(--cta1),var(--cta2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.plano .pr small{font:800 16px var(--sans);color:var(--mut)}
+.plano .sai{margin:0 0 12px;font:700 15px var(--sans);color:var(--mut)}
+.plano .sai b{color:var(--ink)}
+.plano .eco{display:inline-flex;align-items:center;gap:6px;background:#DDF3E8;color:#0F6B41;font:900 15.5px var(--sans);padding:8px 14px;border-radius:12px;margin-bottom:8px}
+.plano.dest .eco{background:linear-gradient(120deg,#22C55E,#14804F);color:#fff;box-shadow:0 8px 20px rgba(20,128,79,.3)}
+.plano .eco.vazio{background:#F4F1EC;color:#9A92A6;font-weight:800}
+.plano .chk li{font-size:16px;padding:7px 0 7px 34px}
+.plano .chk li:before{top:9px}
+.plano .cta{display:flex;width:100%;margin-top:16px;padding:17px 20px}
+.plano .cta.sec2{background:#fff;color:var(--cta2);border:2px solid #F3C7D3;box-shadow:none}
+.plano .cta.sec2:after{display:none}
+.plano .cta.sec2:hover{background:#FFF4F6}
+.garantia-p{text-align:center;color:#fff;font:800 17px var(--sans);margin:30px 0 6px}
+.renova-p{text-align:center;color:#9AA4C4;font-size:14px;max-width:620px;margin:0 auto}
+@media(max-width:860px){.planos{grid-template-columns:1fr;max-width:440px;gap:28px}.plano.dest{order:-1}.plano[data-plano=mensal]{order:1}.bons{grid-template-columns:1fr;gap:26px}.pack1{padding:24px 20px 18px}.pilha .it{grid-template-columns:52px 1fr;padding:14px;gap:14px;align-items:start}.pilha .ico,.pilha .it .ico{width:52px;height:52px;font-size:26px;border-radius:16px}.pilha .val{grid-column:2;text-align:left;font-size:20px;display:flex;gap:8px;align-items:baseline}.queda{flex-direction:column;gap:6px;text-align:center}.queda .seta{transform:rotate(90deg)}.queda .q2 b{font-size:46px}.queda .off{margin-top:6px}}
+.selo{display:flex;gap:22px;align-items:center;max-width:760px;margin:54px auto 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:26px}
+.selo .s{flex:0 0 auto;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,var(--lua2),var(--lua));color:var(--noite);display:grid;place-items:center;text-align:center;font:800 13px/1.05 var(--sans);text-transform:uppercase;letter-spacing:.04em}
+.selo .s b{display:block;font:600 44px/1 var(--serif);letter-spacing:0}
+.selo h3{color:#fff;margin-bottom:6px}
+.selo p{margin:0;color:#C9D1E8}
+
+/* ===== 9. PARA QUEM / FAQ ===== */
+.quem{padding:100px 0}
+.faq{padding:0 0 100px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font:600 clamp(19px,3.8vw,22px)/1.3 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';font:400 30px/1 var(--sans);color:var(--cta2);transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin:12px 0 0;color:var(--mut)}
+
+/* ===== 10. FECHAMENTO ===== */
+.fim{position:relative;background:linear-gradient(180deg,var(--dia) 0%,var(--aurora2) 35%,var(--aurora1) 60%,#6E5A8A 85%,var(--noite) 100%);padding:110px 0 120px;text-align:center;overflow:hidden}
+.fim p.big{font:400 clamp(24px,5vw,36px)/1.32 var(--serif);max-width:820px;margin:0 auto 34px;color:var(--ink)}
+.fim p.big em{color:var(--rosa2)}
+.fim .owl{width:110px;margin:0 auto 26px}
+.foot{background:var(--noite);color:#8E98B8;text-align:center;font-size:13.5px;padding:34px 20px 120px}
+.foot a{color:#B9C2DC}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;padding:10px 14px calc(env(safe-area-inset-bottom,0px) + 10px);background:rgba(20,28,53,.94);backdrop-filter:blur(8px)}
+.bar .in{display:flex;align-items:center;gap:12px;max-width:560px;margin:0 auto}
+.bar b{color:#fff;white-space:nowrap;font-size:16px}
+.bar b small{display:block;color:#C9D1E8;font-size:12px;font-weight:700}
+.bar .cta{flex:1;padding:13px 18px;font-size:16px}
+.bar .cta small{display:none}
+
+@media(max-width:860px){
+ .hero,.mae .grid,.futuro .grid,.pack,.base{grid-template-columns:1fr}
+ .hero{padding-bottom:70px;gap:34px}
+ .hero-vis{order:2}
+ .cenas .grid,.probs,.camadas{grid-template-columns:1fr}
+ .nums{grid-template-columns:1fr 1fr}
+ .camada .ph{width:62%}
+ .linha:before{left:22px}
+ .mom{grid-template-columns:1fr;gap:20px;padding-left:52px}
+ .mom:after{left:22px;top:30px}
+ .mom:nth-child(even) .txt{order:0}
+ .mom .ph{width:min(230px,80%);margin:0}
+ .mom.night{margin-left:0;margin-right:0;padding:26px 22px 26px 52px}
+ .virada{grid-template-columns:1fr;text-align:center}
+ .virada svg{margin:0 auto}
+ .futuro .cards{height:440px;max-width:420px;margin:0 auto;width:100%}
+ .bar{display:block}
+ .trilha{display:none}
+ .trilha-m{display:block}
+ .hero-vis .clock{display:none}
+ .selo{flex-direction:column;text-align:center}
+ .moon{width:70vw;right:-25%;top:-6%}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+
+<!-- 1. NOITE: identificação -->
+<section class="noite"><svg class="stars" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff"><circle cx="663" cy="154" r="1.6" opacity="0.35"/><circle cx="148" cy="840" r="2" opacity="0.35"/><circle cx="748" cy="596" r="0.8" opacity="0.5"/><circle cx="76" cy="88" r="1.6" opacity="0.9"/><circle cx="143" cy="246" r="0.8" opacity="0.9"/><circle cx="121" cy="846" r="2" opacity="0.35"/><circle cx="457" cy="645" r="2" opacity="0.35"/><circle cx="1181" cy="599" r="1.6" opacity="0.35"/><circle cx="452" cy="47" r="2" opacity="0.5"/><circle cx="593" cy="429" r="1" opacity="0.35"/><circle cx="1169" cy="315" r="2" opacity="0.5"/><circle cx="211" cy="595" r="2" opacity="0.5"/><circle cx="762" cy="99" r="2" opacity="0.35"/><circle cx="1155" cy="61" r="2" opacity="0.5"/><circle cx="1016" cy="696" r="2" opacity="0.9"/><circle cx="643" cy="476" r="2" opacity="0.9"/><circle cx="740" cy="306" r="1" opacity="0.5"/><circle cx="499" cy="83" r="2" opacity="0.7"/><circle cx="1075" cy="506" r="1.2" opacity="0.9"/><circle cx="589" cy="623" r="0.8" opacity="0.35"/><circle cx="1048" cy="428" r="1" opacity="0.7"/><circle cx="311" cy="500" r="1.6" opacity="0.35"/><circle cx="158" cy="782" r="2" opacity="0.7"/><circle cx="696" cy="711" r="1.2" opacity="0.9"/><circle cx="1187" cy="816" r="1.6" opacity="0.35"/><circle cx="191" cy="276" r="1.6" opacity="0.35"/><circle cx="124" cy="748" r="1.2" opacity="0.9"/><circle cx="582" cy="733" r="1.6" opacity="0.7"/><circle cx="46" cy="472" r="1.2" opacity="0.5"/><circle cx="239" cy="505" r="0.8" opacity="0.5"/><circle cx="588" cy="132" r="1" opacity="0.9"/><circle cx="800" cy="892" r="1.6" opacity="0.35"/><circle cx="340" cy="459" r="1.6" opacity="0.7"/><circle cx="280" cy="838" r="1.6" opacity="0.7"/><circle cx="850" cy="367" r="1.6" opacity="0.5"/><circle cx="309" cy="84" r="1" opacity="0.5"/><circle cx="475" cy="674" r="1" opacity="0.35"/><circle cx="993" cy="851" r="2" opacity="0.5"/><circle cx="538" cy="288" r="0.8" opacity="0.5"/><circle cx="858" cy="547" r="1.2" opacity="0.7"/><circle cx="257" cy="707" r="2" opacity="0.35"/><circle cx="935" cy="891" r="2" opacity="0.9"/><circle cx="815" cy="408" r="1.6" opacity="0.35"/><circle cx="986" cy="649" r="1.6" opacity="0.35"/><circle cx="390" cy="68" r="1" opacity="0.9"/><circle cx="332" cy="112" r="1.2" opacity="0.35"/><circle cx="209" cy="0" r="2" opacity="0.5"/><circle cx="1098" cy="103" r="1.2" opacity="0.35"/><circle cx="144" cy="895" r="1" opacity="0.9"/><circle cx="304" cy="649" r="1.2" opacity="0.7"/><circle cx="745" cy="485" r="0.8" opacity="0.35"/><circle cx="999" cy="477" r="1.6" opacity="0.9"/><circle cx="638" cy="87" r="1" opacity="0.35"/><circle cx="701" cy="758" r="1.2" opacity="0.9"/><circle cx="330" cy="528" r="0.8" opacity="0.5"/><circle cx="1081" cy="370" r="1" opacity="0.35"/><circle cx="1081" cy="305" r="0.8" opacity="0.7"/><circle cx="1061" cy="375" r="1" opacity="0.7"/><circle cx="456" cy="545" r="2" opacity="0.7"/><circle cx="456" cy="627" r="1" opacity="0.5"/><circle cx="820" cy="757" r="1" opacity="0.5"/><circle cx="1060" cy="504" r="1.2" opacity="0.35"/><circle cx="57" cy="809" r="1.2" opacity="0.9"/><circle cx="530" cy="198" r="2" opacity="0.7"/><circle cx="915" cy="827" r="1.2" opacity="0.7"/><circle cx="164" cy="225" r="0.8" opacity="0.5"/><circle cx="962" cy="201" r="1.2" opacity="0.5"/><circle cx="988" cy="639" r="2" opacity="0.35"/><circle cx="981" cy="668" r="1.2" opacity="0.35"/><circle cx="245" cy="397" r="1" opacity="0.9"/><circle cx="365" cy="444" r="1.2" opacity="0.35"/><circle cx="810" cy="474" r="1.6" opacity="0.35"/><circle cx="325" cy="174" r="1" opacity="0.35"/><circle cx="309" cy="604" r="1.6" opacity="0.5"/><circle cx="971" cy="673" r="1.2" opacity="0.5"/><circle cx="1123" cy="561" r="1" opacity="0.35"/><circle cx="29" cy="818" r="0.8" opacity="0.5"/><circle cx="888" cy="892" r="1" opacity="0.5"/><circle cx="57" cy="257" r="1" opacity="0.7"/><circle cx="1026" cy="246" r="2" opacity="0.7"/><circle cx="531" cy="557" r="1.6" opacity="0.5"/><circle cx="124" cy="757" r="1.2" opacity="0.9"/><circle cx="1194" cy="834" r="2" opacity="0.9"/><circle cx="1027" cy="133" r="2" opacity="0.5"/><circle cx="1072" cy="522" r="0.8" opacity="0.9"/><circle cx="375" cy="623" r="0.8" opacity="0.5"/><circle cx="352" cy="144" r="1.6" opacity="0.35"/><circle cx="1139" cy="63" r="1.2" opacity="0.9"/><circle cx="217" cy="573" r="0.8" opacity="0.5"/><circle cx="391" cy="283" r="0.8" opacity="0.35"/><circle cx="1039" cy="463" r="2" opacity="0.35"/><circle cx="129" cy="453" r="1.2" opacity="0.5"/><circle cx="567" cy="463" r="2" opacity="0.9"/><circle cx="1039" cy="253" r="2" opacity="0.7"/><circle cx="1145" cy="207" r="1.6" opacity="0.5"/><circle cx="853" cy="124" r="1.6" opacity="0.9"/><circle cx="647" cy="74" r="1" opacity="0.9"/><circle cx="149" cy="217" r="1.2" opacity="0.35"/><circle cx="316" cy="733" r="1.2" opacity="0.5"/><circle cx="518" cy="140" r="1.6" opacity="0.5"/><circle cx="192" cy="407" r="1.6" opacity="0.5"/><circle cx="458" cy="165" r="1.6" opacity="0.9"/><circle cx="694" cy="431" r="1" opacity="0.7"/><circle cx="652" cy="94" r="1.2" opacity="0.35"/><circle cx="692" cy="567" r="1.6" opacity="0.9"/><circle cx="37" cy="393" r="1.2" opacity="0.7"/><circle cx="1049" cy="65" r="0.8" opacity="0.5"/><circle cx="214" cy="86" r="1.2" opacity="0.7"/><circle cx="81" cy="797" r="1" opacity="0.7"/><circle cx="265" cy="839" r="1.6" opacity="0.7"/><circle cx="831" cy="152" r="2" opacity="0.9"/><circle cx="669" cy="91" r="1.2" opacity="0.35"/><circle cx="375" cy="435" r="0.8" opacity="0.7"/><circle cx="34" cy="649" r="0.8" opacity="0.7"/><circle cx="171" cy="622" r="1" opacity="0.35"/><circle cx="541" cy="883" r="0.8" opacity="0.9"/><circle cx="23" cy="347" r="2" opacity="0.9"/><circle cx="548" cy="636" r="1" opacity="0.35"/><circle cx="1079" cy="726" r="1" opacity="0.35"/><circle cx="330" cy="268" r="0.8" opacity="0.5"/><circle cx="413" cy="319" r="1.2" opacity="0.5"/><circle cx="593" cy="456" r="2" opacity="0.5"/><circle cx="554" cy="355" r="0.8" opacity="0.7"/><circle cx="75" cy="15" r="0.8" opacity="0.5"/><circle cx="1053" cy="486" r="1" opacity="0.9"/><circle cx="217" cy="674" r="1.6" opacity="0.9"/><circle cx="1118" cy="854" r="1.6" opacity="0.7"/><circle cx="440" cy="235" r="1.2" opacity="0.5"/><circle cx="286" cy="414" r="1.2" opacity="0.35"/><circle cx="265" cy="14" r="0.8" opacity="0.7"/><circle cx="882" cy="167" r="0.8" opacity="0.35"/><circle cx="780" cy="891" r="2" opacity="0.7"/><circle cx="496" cy="709" r="1.2" opacity="0.35"/><circle cx="940" cy="189" r="1" opacity="0.7"/><circle cx="913" cy="3" r="1.2" opacity="0.7"/><circle cx="673" cy="560" r="1.2" opacity="0.5"/><circle cx="70" cy="316" r="1" opacity="0.7"/><circle cx="374" cy="1" r="1.2" opacity="0.9"/><circle cx="171" cy="486" r="1.2" opacity="0.5"/><circle cx="508" cy="516" r="0.8" opacity="0.35"/></g></svg><div class="moon"></div>
+<div class="w">
+<div class="top"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="g3B7BB8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8CC2EC"/><stop offset="1" stop-color="#3B7BB8"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#g3B7BB8)"/><path d="M21 44 L25 17 L39 30 Q50 26 61 30 L75 17 L79 44 Q84 84 50 88 Q16 84 21 44 Z" fill="#FFFDF9"/><circle cx="38.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="61.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="40" cy="45" r="5" fill="#2E2A33"/><circle cx="60" cy="45" r="5" fill="#2E2A33"/><circle cx="41.6" cy="43.2" r="1.6" fill="#fff"/><circle cx="61.6" cy="43.2" r="1.6" fill="#fff"/><path d="M46.5 53 L53.5 53 L50 59 Z" fill="#F2A65A"/><ellipse cx="50" cy="73" rx="13" ry="11" fill="#CFE4F6"/><path d="M39.5 66 L41 60 L45 64.5 Z M60.5 66 L59 60 L55 64.5 Z" fill="#CFE4F6"/><path d="M43 71 q2.5 2.5 5 0 M52 71 q2.5 2.5 5 0" fill="none" stroke="#3B7BB8" stroke-width="1.6" stroke-linecap="round"/><path d="M48.6 74.5 L51.4 74.5 L50 77 Z" fill="#F2A65A"/><path d="M23 54 Q21 78 43 84 Q35 74 36 62 Z" fill="#ECE6DE"/><path d="M77 54 Q79 78 57 84 Q65 74 64 62 Z" fill="#ECE6DE"/></svg><b>Mamãe Coruja</b></div>
+<div class="hero">
+ <div>
+  <span class="kick">Para a mãe de primeira viagem que está lendo isto de madrugada</span>
+  <h1>Você não precisa saber tudo. Só precisa saber o <em>próximo passo.</em></h1>
+  <p class="lead">Mamãe Coruja é o app que acompanha você e o seu bebê do primeiro dia em casa ao primeiro aniversário. O que fazer hoje, para a idade dele, na palma da sua mão. Até às 3h da manhã.</p>
+  <a class="cta " href="#tudo"><span>Quero conhecer o app por dentro</span><small>veja tudo o que você recebe</small></a>
+  <div class="trust"><span>30 dias de garantia</span><span>iPhone e Android</span><span>Sem baixar na loja</span></div>
+ </div>
+ <div class="hero-vis">
+  <div class="clock"><small>agora</small>03:12</div>
+  <figure class="ph  dk"><div class="fr"><div class="sc"><div class="sb"><b>3:12</b><i class="il"></i><span class="bt"></span></div><img src="img/noite.jpg" alt="Modo Noite do app Mamãe Coruja" width="585" height="1266" loading="lazy"></div></div></figure>
+  <div class="owl"><svg viewBox="12 12 76 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 44 L25 17 L39 30 Q50 26 61 30 L75 17 L79 44 Q84 84 50 88 Q16 84 21 44 Z" fill="#FFFDF9"/><circle cx="38.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="61.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="40" cy="45" r="5" fill="#2E2A33"/><circle cx="60" cy="45" r="5" fill="#2E2A33"/><circle cx="41.6" cy="43.2" r="1.6" fill="#fff"/><circle cx="61.6" cy="43.2" r="1.6" fill="#fff"/><path d="M46.5 53 L53.5 53 L50 59 Z" fill="#F2A65A"/><ellipse cx="50" cy="73" rx="13" ry="11" fill="#CFE4F6"/><path d="M39.5 66 L41 60 L45 64.5 Z M60.5 66 L59 60 L55 64.5 Z" fill="#CFE4F6"/><path d="M43 71 q2.5 2.5 5 0 M52 71 q2.5 2.5 5 0" fill="none" stroke="#3B7BB8" stroke-width="1.6" stroke-linecap="round"/><path d="M48.6 74.5 L51.4 74.5 L50 77 Z" fill="#F2A65A"/><path d="M23 54 Q21 78 43 84 Q35 74 36 62 Z" fill="#ECE6DE"/><path d="M77 54 Q79 78 57 84 Q65 74 64 62 Z" fill="#ECE6DE"/></svg></div>
+ </div>
+</div>
+</div>
+<div class="w cenas">
+ <span class="kick" style="color:var(--lua)">Talvez você se reconheça</span>
+ <h2>Se você já viveu pelo menos uma destas cenas, esta página foi escrita para você.</h2>
+ <div class="grid"><div class="cena"><time>03:12</time><p>Você digitou “é normal bebê chorar tanto?” no Google pela quinta vez esta semana.</p></div><div class="cena"><time>06:40</time><p>Ele acordou com fome e você não lembra se a última mamada foi no peito esquerdo ou no direito.</p></div><div class="cena"><time>11:05</time><p>Sua mãe disse uma coisa, a sogra outra, o grupo de mães uma terceira. E você ficou ainda mais perdida.</p></div><div class="cena"><time>15:30</time><p>“Será que já passou da hora da vacina?” A caderneta está em algum lugar da casa.</p></div><div class="cena"><time>18:45</time><p>O choro do fim da tarde começou e você sente que está fazendo tudo errado.</p></div><div class="cena"><time>23:50</time><p>Exausta, mas sem conseguir dormir, pensando se esqueceu alguma coisa importante.</p></div></div>
+ <p class="respira">Se você se reconheceu, respira. Isso não é falta de instinto, nem falta de amor. <b>É falta de um mapa.</b></p>
+</div>
+</section>
+
+<!-- 2. AMANHECER: o problema de verdade -->
+<section class="aurora"><div class="w">
+ <div class="narrow" style="margin:0">
+  <span class="kick">O problema de verdade</span>
+  <h2>Por que é tão difícil, se nunca houve tanta informação?</h2>
+ </div>
+ <div class="probs"><div class="prob"><div class="n">01</div><h3>Informação demais, e cada uma diz uma coisa</h3><p>Sites, livros, parentes e grupos. Sem saber em quem confiar, você trava, e a dúvida vira culpa.</p></div><div class="prob"><div class="n">02</div><h3>A dúvida chega na hora errada</h3><p>As perguntas aparecem de madrugada, com o consultório fechado e todo mundo dormindo.</p></div><div class="prob"><div class="n">03</div><h3>O cansaço apaga a memória</h3><p>Com o sono picado, fica difícil lembrar horários, mamadas, vacinas e o que o pediatra falou.</p></div></div>
+ <div class="virada"><div style="width:92px"><svg viewBox="12 12 76 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 44 L25 17 L39 30 Q50 26 61 30 L75 17 L79 44 Q84 84 50 88 Q16 84 21 44 Z" fill="#FFFDF9"/><circle cx="38.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="61.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="40" cy="45" r="5" fill="#2E2A33"/><circle cx="60" cy="45" r="5" fill="#2E2A33"/><circle cx="41.6" cy="43.2" r="1.6" fill="#fff"/><circle cx="61.6" cy="43.2" r="1.6" fill="#fff"/><path d="M46.5 53 L53.5 53 L50 59 Z" fill="#F2A65A"/><ellipse cx="50" cy="73" rx="13" ry="11" fill="#CFE4F6"/><path d="M39.5 66 L41 60 L45 64.5 Z M60.5 66 L59 60 L55 64.5 Z" fill="#CFE4F6"/><path d="M43 71 q2.5 2.5 5 0 M52 71 q2.5 2.5 5 0" fill="none" stroke="#3B7BB8" stroke-width="1.6" stroke-linecap="round"/><path d="M48.6 74.5 L51.4 74.5 L50 77 Z" fill="#F2A65A"/><path d="M23 54 Q21 78 43 84 Q35 74 36 62 Z" fill="#ECE6DE"/><path d="M77 54 Q79 78 57 84 Q65 74 64 62 Z" fill="#ECE6DE"/></svg></div><p>Você não precisa de mais conteúdo. Precisa do <b>conteúdo certo, na hora certa, organizado pela idade do seu bebê.</b> Foi para isso que nasceu o Mamãe Coruja.</p></div>
+</div></section>
+
+<!-- 3. MÉTODO -->
+<section class="metodo"><div class="w">
+ <div class="narrow" style="margin:0"><span class="kick" style="color:var(--azul2)">Como funciona</span>
+ <h2>Três camadas que trabalham juntas, todos os dias.</h2>
+ <p class="lead" style="color:var(--mut);margin-top:16px">Em vez de jogar 300 páginas de informação no seu colo, o app entrega só o que serve para hoje, para o seu bebê.</p></div>
+ <div class="camadas">
+  <div class="camada"><span class="num">Camada 1 · Hoje</span><h3>Um passo por dia</h3><p>30 etapas curtas para os primeiros dias em casa: pega, coto, banho, sono seguro, choro, cólica, vacinas e você.</p><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>9:41</b><i class="il"></i><span class="bt"></span></div><img src="img/hoje-azul.jpg" alt="Tela Hoje com o passo do dia" width="585" height="1266" loading="lazy"></div></div></figure></div>
+  <div class="camada"><span class="num">Camada 2 · Mês a mês</span><h3>O que esperar agora</h3><p>Do 1º ao 12º mês, liberado pela idade do seu bebê: desenvolvimento, sono, alimentação, saúde e brincadeiras.</p><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>9:41</b><i class="il"></i><span class="bt"></span></div><img src="img/mes.jpg" alt="Mês a mês do primeiro ano" width="585" height="1266" loading="lazy"></div></div></figure></div>
+  <div class="camada"><span class="num">Camada 3 · Na hora do aperto</span><h3>Ferramentas a um toque</h3><p>SOS do choro, Modo Noite, diário de mamadas e agenda de vacinas, para quando não dá tempo de pesquisar.</p><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>9:41</b><i class="il"></i><span class="bt"></span></div><img src="img/sos.jpg" alt="SOS do choro" width="585" height="1266" loading="lazy"></div></div></figure></div>
+ </div>
+ <div class="trilha"><svg viewBox="0 0 960 150" role="img" aria-label="Do primeiro dia em casa ao primeiro aniversário">
+<defs><linearGradient id="tr" x1="0" x2="1"><stop offset="0" stop-color="#5B9BD5"/><stop offset="1" stop-color="#E07399"/></linearGradient></defs>
+<path d="M40 90 C 240 20, 420 140, 600 70 S 860 40, 920 80" fill="none" stroke="url(#tr)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 0"/>
+<g font-family="Nunito,Arial" font-weight="800" font-size="15" fill="#1E2742" text-anchor="middle">
+<circle cx="40" cy="90" r="11" fill="#5B9BD5"/><text x="40" y="128">Dia 1</text><text x="40" y="145" font-weight="600" font-size="13" fill="#5E6883">em casa</text>
+<circle cx="250" cy="62" r="9" fill="#7E97CF"/><text x="250" y="36">Dia 30</text><text x="250" y="20" font-weight="600" font-size="13" fill="#5E6883">rotina montada</text>
+<circle cx="460" cy="108" r="9" fill="#A08ABF"/><text x="460" y="138">Mês 4</text><text x="460" y="150" font-weight="600" font-size="13" fill="#5E6883"></text>
+<circle cx="640" cy="64" r="9" fill="#C77DAA"/><text x="640" y="36">Mês 6</text><text x="640" y="20" font-weight="600" font-size="13" fill="#5E6883">primeira papinha</text>
+<circle cx="920" cy="80" r="13" fill="#E07399"/><text x="900" y="120" text-anchor="end">1 ano</text><text x="900" y="138" text-anchor="end" font-weight="600" font-size="13" fill="#5E6883">primeiro aniversário</text>
+</g></svg></div>
+ <ol class="trilha-m"><li><b>Dia 1</b>em casa</li><li><b>Dia 30</b>rotina montada</li><li><b>Mês 4</b>novo sono</li><li><b>Mês 6</b>primeira papinha</li><li><b>1 ano</b>primeiro aniversário</li></ol>
+</div></section>
+
+<!-- 4. PROVAS LÓGICAS -->
+<section class="provas"><div class="w">
+ <div class="narrow" style="margin:0"><span class="kick" style="color:var(--rosa2)">Não é promessa</span>
+ <h2>É o que já está dentro do app, no dia em que você entra.</h2></div>
+ <div class="nums"><div class="numb"><b>30</b><span>etapas no programa dos primeiros dias</span></div><div class="numb"><b>12</b><span>meses de acompanhamento, pela idade</span></div><div class="numb"><b>17</b><span>vacinas e consultas na sua agenda</span></div><div class="numb"><b>18</b><span>guias de cuidados e saúde</span></div><div class="numb"><b>13</b><span>“primeiras vezes” para guardar</span></div><div class="numb"><b>9</b><span>passos no SOS do choro</span></div><div class="numb"><b>9</b><span>sons para dormir, com temporizador</span></div><div class="numb"><b>5</b><span>massagens guiadas, só com as mãos</span></div></div>
+ <div class="base">
+  <div class="box"><h3>Construído sobre referências oficiais</h3><ul class="chk">
+   <li>Calendário de vacinação do SUS e Caderneta da Criança</li><li>Recomendações do Ministério da Saúde para amamentação e consultas</li><li>Guia Alimentar para Crianças Brasileiras Menores de 2 Anos</li><li>Regras de sono seguro em todas as etapas</li><li>Sinais de alerta com SAMU 192 e apoio emocional com CVV 188</li></ul></div>
+  <div class="box"><h3>E sem o que você não precisa</h3><ul class="chk no">
+   <li>Promessa de “bebê dormindo a noite toda em 3 dias”</li><li>Métodos de deixar o bebê chorando sozinho</li><li>Achismo, julgamento ou receita caseira</li><li>Anúncios, mensalidade escondida ou fidelidade</li></ul>
+   <p style="margin:16px 0 0;color:var(--mut);font-size:15.5px">O app não substitui o pediatra. Ele ajuda você a chegar na consulta com tudo anotado e mostra quando procurar atendimento.</p></div>
+ </div>
+</div></section>
+
+<!-- 5. UM DIA COM O APP -->
+<section class="dia"><div class="w">
+ <div class="narrow" style="margin:0"><span class="kick" style="color:var(--cta2)">Na prática</span>
+ <h2>Um dia com o Mamãe Coruja.</h2></div>
+ <div class="linha"><div class="mom "><div class="txt"><time class="">09:10</time><h3>O app lembra por você</h3><p>Próxima mamada: peito direito. A última foi às 6h40, no esquerdo. Um toque e o cronômetro começa.</p></div><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>9:10</b><i class="il"></i><span class="bt"></span></div><img src="img/mamada.jpg" alt="O app lembra por você" width="585" height="1266" loading="lazy"></div></div></figure></div><div class="mom "><div class="txt"><time class="">10:30</time><h3>O passo do dia, sem achismo</h3><p>Hoje: trocas de fralda e assaduras. Uma leitura de 2 minutos, duas tarefas simples e a rotina do dia logo abaixo.</p></div><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>10:30</b><i class="il"></i><span class="bt"></span></div><img src="img/hoje-rosa.jpg" alt="O passo do dia, sem achismo" width="585" height="1266" loading="lazy"></div></div></figure></div><div class="mom "><div class="txt"><time class="">14:05</time><h3>Nada de vacina esquecida</h3><p>A agenda avisa: vacinas dos 2 meses em 5 dias. Todo o primeiro ano, montado pela idade do seu bebê.</p></div><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>14:05</b><i class="il"></i><span class="bt"></span></div><img src="img/agenda.jpg" alt="Nada de vacina esquecida" width="585" height="1266" loading="lazy"></div></div></figure></div><div class="mom "><div class="txt"><time class="">18:45</time><h3>Quando o choro aperta, um plano</h3><p>Você abre o SOS do choro e vai passo a passo: fome, fralda, gases, sono, acolhimento. Com o shhh a um toque.</p></div><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>18:45</b><i class="il"></i><span class="bt"></span></div><img src="img/sos.jpg" alt="Quando o choro aperta, um plano" width="585" height="1266" loading="lazy"></div></div></figure></div><div class="mom "><div class="txt"><time class="">19:30</time><h3>O ritual que acalma a casa</h3><p>Massagem guiada com cronômetro e canção de ninar com temporizador. Toda noite, o mesmo sinal de que é hora de dormir.</p></div><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>19:30</b><i class="il"></i><span class="bt"></span></div><img src="img/acalmar.jpg" alt="O ritual que acalma a casa" width="585" height="1266" loading="lazy"></div></div></figure></div><div class="mom night"><div class="txt"><time class="n">03:12</time><h3>Uma mão no bebê, outra no app</h3><p>Modo Noite: tela escura, botões grandes, mamada e fralda registradas sem acender o quarto.</p></div><figure class="ph  dk"><div class="fr"><div class="sc"><div class="sb"><b>3:12</b><i class="il"></i><span class="bt"></span></div><img src="img/noite.jpg" alt="Uma mão no bebê, outra no app" width="585" height="1266" loading="lazy"></div></div></figure></div></div>
+ <div style="text-align:center;margin-top:10px"><a class="cta " href="#tudo"><span>Quero isso na minha rotina</span><small>veja tudo o que você recebe</small></a></div>
+</div></section>
+
+<!-- 6. A MÃE -->
+<section class="mae"><div class="w grid">
+ <figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>9:41</b><i class="il"></i><span class="bt"></span></div><img src="img/mae.jpg" alt="Espaço Para você" width="585" height="1266" loading="lazy"></div></div></figure>
+ <div><span class="kick" style="color:var(--rosa2)">E quem cuida de você?</span>
+  <blockquote>“Um bebê bem cuidado precisa de uma mãe cuidada.”</blockquote>
+  <p class="lead" style="color:var(--mut)">O app pergunta como você está. Todo dia. Se os dias difíceis se repetem, ele acolhe, sugere uma pausa e mostra onde buscar ajuda.</p>
+  <ul class="chk" style="margin-top:18px"><li>Humor do dia e da semana, sem julgamento</li><li>Respiração guiada de 1 minuto para os momentos de limite</li><li>Check-in semanal para enxergar sua evolução</li><li>Etapas sobre pós-parto, baby blues e como pedir ajuda</li></ul>
+ </div>
+</div></section>
+
+<!-- 7. O FUTURO -->
+<section class="futuro"><div class="w grid">
+ <div><span class="kick" style="color:var(--azul2)">Daqui a um ano</span>
+  <h2>Agora imagine o dia do primeiro aniversário.</h2>
+  <p class="lead" style="margin-top:18px">Você abre o app e está tudo lá: o dia do primeiro sorriso, a primeira risada, o peso de cada consulta, o cartão de cada mesversário.</p>
+  <p class="lead">Um ano inteiro guardado, enquanto você vivia o ano mais intenso da sua vida. E, no caminho, muito menos medo e muito mais presença.</p>
+  <div class="duo"><div style="background:linear-gradient(140deg,#8CC2EC,#3B7BB8)"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="g3B7BB8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8CC2EC"/><stop offset="1" stop-color="#3B7BB8"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#g3B7BB8)"/><path d="M21 44 L25 17 L39 30 Q50 26 61 30 L75 17 L79 44 Q84 84 50 88 Q16 84 21 44 Z" fill="#FFFDF9"/><circle cx="38.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="61.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="40" cy="45" r="5" fill="#2E2A33"/><circle cx="60" cy="45" r="5" fill="#2E2A33"/><circle cx="41.6" cy="43.2" r="1.6" fill="#fff"/><circle cx="61.6" cy="43.2" r="1.6" fill="#fff"/><path d="M46.5 53 L53.5 53 L50 59 Z" fill="#F2A65A"/><ellipse cx="50" cy="73" rx="13" ry="11" fill="#CFE4F6"/><path d="M39.5 66 L41 60 L45 64.5 Z M60.5 66 L59 60 L55 64.5 Z" fill="#CFE4F6"/><path d="M43 71 q2.5 2.5 5 0 M52 71 q2.5 2.5 5 0" fill="none" stroke="#3B7BB8" stroke-width="1.6" stroke-linecap="round"/><path d="M48.6 74.5 L51.4 74.5 L50 77 Z" fill="#F2A65A"/><path d="M23 54 Q21 78 43 84 Q35 74 36 62 Z" fill="#ECE6DE"/><path d="M77 54 Q79 78 57 84 Q65 74 64 62 Z" fill="#ECE6DE"/></svg><span>Menino<br><small style="font-weight:700;opacity:.9">azul bebê</small></span></div><div style="background:linear-gradient(140deg,#F3A6C2,#C2557C)"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="gC2557C" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3A6C2"/><stop offset="1" stop-color="#C2557C"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#gC2557C)"/><path d="M21 44 L25 17 L39 30 Q50 26 61 30 L75 17 L79 44 Q84 84 50 88 Q16 84 21 44 Z" fill="#FFFDF9"/><circle cx="38.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="61.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="40" cy="45" r="5" fill="#2E2A33"/><circle cx="60" cy="45" r="5" fill="#2E2A33"/><circle cx="41.6" cy="43.2" r="1.6" fill="#fff"/><circle cx="61.6" cy="43.2" r="1.6" fill="#fff"/><path d="M46.5 53 L53.5 53 L50 59 Z" fill="#F2A65A"/><ellipse cx="50" cy="73" rx="13" ry="11" fill="#F9D3E1"/><path d="M39.5 66 L41 60 L45 64.5 Z M60.5 66 L59 60 L55 64.5 Z" fill="#F9D3E1"/><path d="M43 71 q2.5 2.5 5 0 M52 71 q2.5 2.5 5 0" fill="none" stroke="#C2557C" stroke-width="1.6" stroke-linecap="round"/><path d="M48.6 74.5 L51.4 74.5 L50 77 Z" fill="#F2A65A"/><path d="M23 54 Q21 78 43 84 Q35 74 36 62 Z" fill="#ECE6DE"/><path d="M77 54 Q79 78 57 84 Q65 74 64 62 Z" fill="#ECE6DE"/></svg><span>Menina<br><small style="font-weight:700;opacity:.9">rosa</small></span></div></div>
+ </div>
+ <div class="cards"><img class="cartao" src="img/cartao-exemplo.jpg" alt="Cartão de mesversário criado no app" loading="lazy" width="540" height="675"><figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>9:41</b><i class="il"></i><span class="bt"></span></div><img src="img/conquistas.jpg" alt="Primeiras vezes" width="585" height="1266" loading="lazy"></div></div></figure></div>
+</div></section>
+
+<!-- 8. TUDO O QUE VOCÊ RECEBE (pilha de valor) -->
+<section class="tudo" id="tudo"><div class="w">
+ <div class="narrow c0"><span class="kick" style="color:var(--rosa2)">Tudo o que você recebe</span>
+ <h2>Um ano inteiro de apoio, dentro de um app só.</h2>
+ <p class="lead" style="color:var(--mut);margin-top:16px">Se cada parte do Mamãe Coruja fosse vendida separada, como um curso ou um guia, seria assim:</p></div>
+ <div class="pilha"><div class="it"><span class="ico" style="--c1:#8CC2EC;--c2:#3B7BB8">👣</span><div class="tx"><span class="num">01</span><h3>Programa Primeiros 30 Dias</h3><p>30 etapas curtas em 4 semanas: da chegada em casa à rotina montada. Uma por dia, no seu ritmo.</p></div><div class="val"><small>valor</small>R$ 97</div></div><div class="it"><span class="ico" style="--c1:#B9A7E8;--c2:#7A66B8">📆</span><div class="tx"><span class="num">02</span><h3>Mês a mês do primeiro ano</h3><p>12 meses liberados pela idade do bebê: o que esperar, sono, saúde e como estimular em cada fase.</p></div><div class="val"><small>valor</small>R$ 147</div></div><div class="it"><span class="ico" style="--c1:#FFB199;--c2:#E4507E">🆘</span><div class="tx"><span class="num">03</span><h3>SOS da madrugada + Modo Noite</h3><p>9 situações com passo a passo (choro, febre, engasgo, cólica…), sinais de alerta e tela escura para as 3h da manhã.</p></div><div class="val"><small>valor</small>R$ 67</div></div><div class="it"><span class="ico" style="--c1:#9ED9C4;--c2:#2E9B76">💉</span><div class="tx"><span class="num">04</span><h3>Agenda de vacinas e consultas</h3><p>17 vacinas e consultas do calendário oficial, com aviso antes de cada uma e o que levar.</p></div><div class="val"><small>valor</small>R$ 37</div></div><div class="it"><span class="ico" style="--c1:#FFD59A;--c2:#E09A2D">📝</span><div class="tx"><span class="num">05</span><h3>Diário inteligente</h3><p>Mamadas (com o próximo peito), sono, fraldas e choro em 1 toque. Resumo pronto para mostrar ao pediatra.</p></div><div class="val"><small>valor</small>R$ 47</div></div><div class="it"><span class="ico" style="--c1:#A9C8F5;--c2:#5B7FD5">🎶</span><div class="tx"><span class="num">06</span><h3>Acalmar: sons e massagens</h3><p>9 sons para dormir (shhh, ruído branco, útero, canções) e 5 massagens guiadas, uma delas para cólica.</p></div><div class="val"><small>valor</small>R$ 37</div></div><div class="it"><span class="ico" style="--c1:#F3A6C2;--c2:#C2557C">📚</span><div class="tx"><span class="num">07</span><h3>18 guias de cuidados</h3><p>Banho, coto umbilical, pega, arrotar, cólica, sono seguro, febre e mais, em linguagem simples.</p></div><div class="val"><small>valor</small>R$ 67</div></div><div class="it"><span class="ico" style="--c1:#F7B7A3;--c2:#D8704F">🫶</span><div class="tx"><span class="num">08</span><h3>Espaço para você</h3><p>Humor do dia, respiração guiada de 1 minuto, check-in semanal e etapas sobre pós-parto e baby blues.</p></div><div class="val"><small>valor</small>R$ 47</div></div><div class="it"><span class="ico" style="--c1:#FFE08A;--c2:#D9A21B">🏆</span><div class="tx"><span class="num">09</span><h3>Primeiras vezes e crescimento</h3><p>13 conquistas com data e foto, mais a curva de peso e altura de cada consulta.</p></div><div class="val"><small>valor</small>R$ 27</div></div></div><div class="bonus-t"><span>E ainda, sem pagar nada a mais</span></div><div class="bons"><div class="bon-c"><span class="rib">🎁 Bônus 1 · grátis</span><span class="ico ouro">😴</span><div class="tx"><h3>Módulo Sono de 4 a 12 meses</h3><p>O próximo passo depois dos primeiros meses: horários, sonecas e noites mais organizadas.</p></div><div class="val"><s>R$ 97</s><b>GRÁTIS</b></div></div><div class="bon-c"><span class="rib">🎁 Bônus 2 · grátis</span><span class="ico ouro">🥕</span><div class="tx"><h3>Módulo Primeiros Alimentos</h3><p>Comida de verdade a partir dos 6 meses, com segurança e sem estresse.</p></div><div class="val"><s>R$ 97</s><b>GRÁTIS</b></div></div></div><div class="soma"><small>Se fosse vendido separado, tudo isso custaria</small><b>R$ 767</b><p>E você ainda teria que juntar tudo sozinha, em PDFs, vídeos e grupos diferentes, às 3h da manhã.</p></div>
+</div></section>
+
+<!-- 9. OFERTA + GARANTIA -->
+<section class="oferta" id="oferta"><svg class="stars" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff"><circle cx="487" cy="606" r="2" opacity="0.5"/><circle cx="757" cy="618" r="1.6" opacity="0.35"/><circle cx="26" cy="857" r="1.6" opacity="0.7"/><circle cx="1128" cy="239" r="1" opacity="0.9"/><circle cx="1107" cy="856" r="2" opacity="0.9"/><circle cx="813" cy="654" r="1" opacity="0.5"/><circle cx="310" cy="888" r="2" opacity="0.9"/><circle cx="31" cy="687" r="0.8" opacity="0.5"/><circle cx="87" cy="308" r="0.8" opacity="0.7"/><circle cx="968" cy="609" r="1.6" opacity="0.9"/><circle cx="808" cy="745" r="2" opacity="0.9"/><circle cx="274" cy="899" r="1.2" opacity="0.35"/><circle cx="73" cy="139" r="1.6" opacity="0.5"/><circle cx="528" cy="688" r="1.6" opacity="0.7"/><circle cx="862" cy="519" r="1.6" opacity="0.7"/><circle cx="1093" cy="599" r="1.6" opacity="0.5"/><circle cx="689" cy="698" r="0.8" opacity="0.7"/><circle cx="334" cy="715" r="1.2" opacity="0.35"/><circle cx="432" cy="648" r="2" opacity="0.7"/><circle cx="583" cy="127" r="0.8" opacity="0.9"/><circle cx="990" cy="90" r="1.2" opacity="0.35"/><circle cx="840" cy="154" r="0.8" opacity="0.7"/><circle cx="874" cy="787" r="1.6" opacity="0.35"/><circle cx="90" cy="619" r="2" opacity="0.35"/><circle cx="773" cy="735" r="2" opacity="0.7"/><circle cx="1128" cy="285" r="2" opacity="0.5"/><circle cx="73" cy="317" r="0.8" opacity="0.35"/><circle cx="221" cy="614" r="2" opacity="0.35"/><circle cx="404" cy="417" r="1.2" opacity="0.7"/><circle cx="319" cy="706" r="0.8" opacity="0.7"/><circle cx="642" cy="368" r="1" opacity="0.9"/><circle cx="771" cy="471" r="2" opacity="0.9"/><circle cx="1145" cy="105" r="2" opacity="0.7"/><circle cx="883" cy="649" r="1" opacity="0.7"/><circle cx="895" cy="264" r="2" opacity="0.7"/><circle cx="1123" cy="347" r="0.8" opacity="0.9"/><circle cx="1187" cy="322" r="0.8" opacity="0.9"/><circle cx="272" cy="61" r="1.2" opacity="0.9"/><circle cx="722" cy="695" r="1.2" opacity="0.7"/><circle cx="1002" cy="22" r="2" opacity="0.35"/><circle cx="43" cy="378" r="1.2" opacity="0.9"/><circle cx="611" cy="606" r="2" opacity="0.7"/><circle cx="363" cy="372" r="1" opacity="0.7"/><circle cx="756" cy="864" r="2" opacity="0.7"/><circle cx="615" cy="806" r="1.6" opacity="0.35"/><circle cx="55" cy="582" r="1" opacity="0.7"/><circle cx="1024" cy="227" r="1.2" opacity="0.5"/><circle cx="671" cy="191" r="1.6" opacity="0.35"/><circle cx="208" cy="615" r="1.2" opacity="0.7"/><circle cx="459" cy="448" r="1" opacity="0.35"/><circle cx="689" cy="759" r="1" opacity="0.9"/><circle cx="554" cy="230" r="0.8" opacity="0.35"/><circle cx="1084" cy="195" r="1.2" opacity="0.5"/><circle cx="570" cy="348" r="0.8" opacity="0.7"/><circle cx="265" cy="431" r="1.2" opacity="0.7"/><circle cx="951" cy="354" r="1.6" opacity="0.7"/><circle cx="859" cy="581" r="1.6" opacity="0.35"/><circle cx="846" cy="159" r="1" opacity="0.35"/><circle cx="977" cy="852" r="2" opacity="0.9"/><circle cx="1144" cy="734" r="1" opacity="0.35"/><circle cx="935" cy="856" r="2" opacity="0.7"/><circle cx="1113" cy="349" r="1" opacity="0.35"/><circle cx="587" cy="122" r="1" opacity="0.35"/><circle cx="71" cy="822" r="2" opacity="0.5"/><circle cx="880" cy="590" r="0.8" opacity="0.35"/><circle cx="985" cy="763" r="0.8" opacity="0.5"/><circle cx="1030" cy="307" r="1" opacity="0.35"/><circle cx="1075" cy="549" r="1.6" opacity="0.35"/><circle cx="232" cy="349" r="1" opacity="0.7"/><circle cx="1107" cy="488" r="0.8" opacity="0.7"/><circle cx="452" cy="202" r="0.8" opacity="0.35"/><circle cx="350" cy="245" r="1.2" opacity="0.5"/><circle cx="15" cy="499" r="2" opacity="0.9"/><circle cx="102" cy="774" r="1.2" opacity="0.5"/><circle cx="550" cy="632" r="2" opacity="0.9"/><circle cx="104" cy="484" r="1.2" opacity="0.35"/><circle cx="112" cy="793" r="1" opacity="0.35"/><circle cx="255" cy="51" r="0.8" opacity="0.9"/><circle cx="67" cy="874" r="0.8" opacity="0.9"/><circle cx="646" cy="160" r="1.2" opacity="0.35"/><circle cx="719" cy="395" r="1.6" opacity="0.7"/><circle cx="738" cy="271" r="1" opacity="0.7"/><circle cx="877" cy="126" r="1" opacity="0.35"/><circle cx="778" cy="814" r="0.8" opacity="0.5"/><circle cx="87" cy="382" r="1.6" opacity="0.9"/><circle cx="88" cy="637" r="1.6" opacity="0.35"/><circle cx="762" cy="642" r="1.6" opacity="0.7"/><circle cx="861" cy="710" r="1.6" opacity="0.9"/><circle cx="36" cy="250" r="1" opacity="0.7"/><circle cx="146" cy="822" r="1.6" opacity="0.5"/></g></svg><div class="w">
+ <p class="nao-paga">Mas você não vai pagar R$ 767.<br>Nem R$ 297. Nem R$ 97.</p>
+ <h2>Tudo isso por menos de <em style="color:var(--lua)">R$ 1 por dia.</em></h2>
+ <p class="sub">Menos do que um cafezinho, para ter o próximo passo na mão durante o primeiro ano do seu bebê.</p>
+ <div class="pack1"><h3>A assinatura Mamãe Coruja inclui</h3><ul class="vl"><li><span>Programa Primeiros 30 Dias</span><s>R$ 97</s></li><li><span>Mês a mês do primeiro ano</span><s>R$ 147</s></li><li><span>SOS da madrugada + Modo Noite</span><s>R$ 67</s></li><li><span>Agenda de vacinas e consultas</span><s>R$ 37</s></li><li><span>Diário inteligente</span><s>R$ 47</s></li><li><span>Acalmar: sons e massagens</span><s>R$ 37</s></li><li><span>18 guias de cuidados</span><s>R$ 67</s></li><li><span>Espaço para você</span><s>R$ 47</s></li><li><span>Primeiras vezes e crescimento</span><s>R$ 27</s></li><li><span>Módulo Sono de 4 a 12 meses <em>bônus</em></span><s>R$ 97</s></li><li><span>Módulo Primeiros Alimentos <em>bônus</em></span><s>R$ 97</s></li></ul><p class="tot">Total: <s>R$ 767</s></p></div><div class="queda"><div class="q1"><small>Valor de tudo</small><s>R$ 767</s></div><span class="seta">➜</span><div class="q2"><small>Hoje, no plano anual</small><b>R$ 197</b><em>R$ 0,54 por dia</em></div><span class="off">−74%</span></div><p class="escolha">Hoje, escolha o seu plano:<small>todos com tudo incluso e 30 dias de garantia</small></p><div class="planos" id="planos"><div class="plano" data-plano="mensal"><div class="cab-p"><h3>Mensal</h3></div><p class="de">&nbsp;</p><div class="pr"><b>R$ 27</b><small>/mês</small></div><p class="sai">cobrado todo mês · <b>R$ 0,89 por dia</b></p><span class="eco vazio">sem desconto</span><ul class="chk"><li>Tudo do app, sem limite</li><li>Os 2 módulos bônus inclusos</li><li>Cancele quando quiser</li></ul><a class="cta sec2" data-checkout data-plano="mensal" data-valor="27" href="https://checkout.b4you.com.br/mzcC3j6aDl"><span>Quero o mensal</span></a></div><div class="plano dest" data-plano="anual"><span class="fita">⭐ Mais econômico</span><div class="cab-p"><h3>Anual</h3><span class="pct">−39%</span></div><p class="de">de <s>R$ 324</s> por</p><div class="pr"><b>R$ 197</b><small>/ano</small></div><p class="sai">sai por R$ 16,42 por mês · <b>R$ 0,54 por dia</b></p><span class="eco">💰 Economize R$ 127</span><ul class="chk"><li>Tudo do mensal</li><li>O primeiro ano inteiro <span class=x-de>do seu bebê</span>, até o 1º aniversário</li><li>Um pagamento só, sem cobrança todo mês</li><li>Nenhum mês do primeiro ano sem o app</li></ul><a class="cta pulse" data-checkout data-plano="anual" data-valor="197" href="https://checkout.b4you.com.br/SmOv4sYzPA"><span>Quero o anual</span></a></div><div class="plano" data-plano="semestral"><div class="cab-p"><h3>Semestral</h3><span class="pct">−28%</span></div><p class="de">de <s>R$ 162</s> por</p><div class="pr"><b>R$ 117</b><small>/semestre</small></div><p class="sai">sai por R$ 19,50 por mês · <b>R$ 0,64 por dia</b></p><span class="eco">💰 Economize R$ 45</span><ul class="chk"><li>Tudo do mensal</li><li>Seis meses de acompanhamento</li><li>Renova a cada 6 meses</li></ul><a class="cta sec2" data-checkout data-plano="semestral" data-valor="117" href="https://checkout.b4you.com.br/fB8hKpLzix"><span>Quero o semestral</span></a></div></div><p class="garantia-p">💛 30 dias de garantia em todos os planos · acesso na hora, no e-mail e no WhatsApp</p><p class="renova-p">Pagamento no cartão, renovado ao fim de cada período. Sem fidelidade: cancele quando quiser pelo WhatsApp e use até o fim do período pago.</p>
+ <div class="selo"><div class="s"><span><b>30</b>dias de<br>garantia</span></div><div><h3>Teste por 30 dias. O risco é todo nosso.</h3><p>Use o Mamãe Coruja na sua rotina por um mês inteiro. Se não sentir que os dias ficaram mais leves, peça o reembolso pelo WhatsApp e devolvemos 100% do que você pagou. Sem perguntas, sem burocracia.</p></div></div>
+</div></section>
+
+<!-- 10. PARA QUEM É -->
+<section class="quem"><div class="w">
+ <div class="base">
+  <div class="box"><h3>É para você se…</h3><ul class="chk"><li>Você é mãe de primeira viagem ou está chegando lá</li><li>Quer saber o que fazer sem ler mil opiniões</li><li>Quer mamadas, vacinas e marcos num lugar só</li><li>Quer viver esse primeiro ano com mais calma</li></ul></div>
+  <div class="box"><h3>Não é para você se…</h3><ul class="chk no"><li>Procura um método de deixar o bebê chorar sozinho</li><li>Espera um substituto para o pediatra</li><li>Quer uma fórmula mágica para dormir a noite toda</li></ul></div>
+ </div>
+</div></section>
+
+<section class="faq"><div class="narrow"><h2 style="margin-bottom:20px">Perguntas frequentes</h2>
+ <details><summary>Preciso baixar na loja de apps?</summary><p>Não. Você abre pelo link que chega no seu e-mail e instala na tela inicial do celular em poucos segundos. Funciona no iPhone e no Android.</p></details><details><summary>Serve para bebê de quantos meses?</summary><p>Do nascimento até o primeiro aniversário. Dá para começar ainda grávida, nas últimas semanas: o app se ajusta pela data de nascimento.</p></details><details><summary>Como funciona a assinatura?</summary><p>Você escolhe o plano: mensal (R$ 27 por mês), semestral (R$ 117 a cada 6 meses) ou anual (R$ 197 por ano). Todos têm tudo incluso e renovam no cartão ao fim do período. Você pode cancelar quando quiser pelo WhatsApp do suporte e continua usando até o fim do período pago.</p></details><details><summary>E se eu não gostar?</summary><p>Você tem 30 dias de garantia. Se não gostar, pede o reembolso pelo WhatsApp e devolvemos 100% do que você pagou.</p></details><details><summary>O app substitui o pediatra?</summary><p>Não, e nunca vai prometer isso. Ele organiza a rotina, ajuda você a acompanhar o bebê, deixa as dúvidas anotadas para a consulta e mostra os sinais de quando procurar atendimento.</p></details><details><summary>É um método de deixar o bebê chorar?</summary><p>Não. Tudo no app parte do acolhimento, da rotina e do sono seguro.</p></details><details><summary>Meus dados ficam salvos?</summary><p>Sim, no seu próprio celular. E você tem um código de backup para levar tudo para outro aparelho.</p></details><details><summary>E se meu bebê for menina? E se ainda não souber?</summary><p>Na primeira tela você conta se é menino ou menina, e o app fica azul ou rosa. Se ainda não souber, escolhe depois.</p></details>
+</div></section>
+
+<!-- 10. FECHAMENTO -->
+<section class="fim"><div class="w">
+ <div class="owl"><svg viewBox="12 12 76 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 44 L25 17 L39 30 Q50 26 61 30 L75 17 L79 44 Q84 84 50 88 Q16 84 21 44 Z" fill="#FFFDF9"/><circle cx="38.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="61.5" cy="44" r="10" fill="#fff" stroke="#E6E1DA" stroke-width="1.5"/><circle cx="40" cy="45" r="5" fill="#2E2A33"/><circle cx="60" cy="45" r="5" fill="#2E2A33"/><circle cx="41.6" cy="43.2" r="1.6" fill="#fff"/><circle cx="61.6" cy="43.2" r="1.6" fill="#fff"/><path d="M46.5 53 L53.5 53 L50 59 Z" fill="#F2A65A"/><ellipse cx="50" cy="73" rx="13" ry="11" fill="#CFE4F6"/><path d="M39.5 66 L41 60 L45 64.5 Z M60.5 66 L59 60 L55 64.5 Z" fill="#CFE4F6"/><path d="M43 71 q2.5 2.5 5 0 M52 71 q2.5 2.5 5 0" fill="none" stroke="#3B7BB8" stroke-width="1.6" stroke-linecap="round"/><path d="M48.6 74.5 L51.4 74.5 L50 77 Z" fill="#F2A65A"/><path d="M23 54 Q21 78 43 84 Q35 74 36 62 Z" fill="#ECE6DE"/><path d="M77 54 Q79 78 57 84 Q65 74 64 62 Z" fill="#ECE6DE"/></svg></div>
+ <p class="big">Os primeiros meses passam rápido. As noites parecem longas, mas um dia você vai sentir saudade até delas. <em>O app Mamãe Coruja existe para você viver esse tempo com mais calma e menos medo.</em></p>
+ <a class="cta pulse" href="#planos"><span>Escolher meu plano</span><small>a partir de R$ 16,42 por mês · 30 dias de garantia</small></a>
+ <p style="margin-top:16px;color:#4B3F66;font-weight:700;font-size:15px">30 dias de garantia · cancele quando quiser</p>
+</div></section>
+
+<footer class="foot"><p>Mamãe Coruja é um app de apoio à rotina e não substitui o acompanhamento pediátrico e médico. Em caso de sinais de alerta, procure atendimento ou ligue 192.</p>
+<p>© Mamãe Coruja App · <a href="termos">Termos de uso</a> · <a href="privacidade">Política de privacidade</a></p></footer>
+
+<div class="bar"><div class="in"><b id="barTx">Mamãe Coruja<small>30 dias de garantia</small></b><a class="cta" id="barBtn" href="#tudo"><span>Ver tudo o que vem</span></a></div></div>
+<script>
+rastrear('ViewContent',{content_name:'Mamãe Coruja - página de vendas'});
+(function(){var els=document.querySelectorAll('section h2,section .lead,.box,.pilha .it,.numb,.mom,.cena,.camada,.mae .ph,.selo,.pack,.soma,details');
+if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);var b=e.target.querySelector&&e.target.querySelector('b');if(e.target.classList.contains('numb')&&b){var n=+b.textContent,t0=null;function st(t){t0=t0||t;var k=Math.min(1,(t-t0)/1100);b.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(st);}requestAnimationFrame(st);}}});},{threshold:.12});
+els.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight){el.classList.add('rv');io.observe(el);}});
+document.querySelectorAll('.preco .cta,.fim .cta,.hero .cta').forEach(function(c){c.classList.add('pulse');});})();
+(function(){var o=document.getElementById('oferta'),b=document.getElementById('barBtn'),t=document.getElementById('barTx'),ok=false;
+function f(){if(ok)return;if(o.getBoundingClientRect().top<innerHeight*.6){ok=true;b.href='#planos';b.firstChild.textContent='Escolher meu plano';t.firstChild.textContent='A partir de R$ 16,42/mês';}}
+addEventListener('scroll',f,{passive:true});f();
+window.aplica=function(){var q=new URLSearchParams(location.search);document.querySelectorAll('a[data-checkout]').forEach(function(a){try{var u=new URL(a.href);q.forEach(function(v,k){u.searchParams.set(k,v);});a.href=u.toString();}catch(e){}});};})();
+(function(){var q=new URLSearchParams(location.search);document.querySelectorAll('a[data-checkout]').forEach(function(a){try{var u=new URL(a.href);q.forEach(function(v,k){u.searchParams.set(k,v);});a.href=u.toString();}catch(e){}});})();
+</script>
+</body></html>
