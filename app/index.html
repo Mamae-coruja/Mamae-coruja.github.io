@@ -30,7 +30,7 @@ const CONFIG = {
 APP: 'Mamãe Coruja',
 SLOGAN: 'O app da mãe de primeira viagem',
 DESCRICAO: 'Amamentação, sono, choro, vacinas, consultas e você: o app completo da mãe de primeira viagem.',
-VERSAO: '2.2.0',
+VERSAO: '2.2.1',
 LINK_VENDAS: 'https://mamae-coruja.github.io/',
 ASSINATURA: {
 preco: 'R$ 27 por mês',
@@ -1803,6 +1803,7 @@ else if (modoAcesso() === 'login' && !(S.acesso && S.acesso.ok)) fbMsg = `Não e
 } catch (e) { console.warn(e); if (modoAcesso() === 'login' && !(S.acesso && S.acesso.ok)) fbMsg = 'Não foi possível verificar sua compra. Confira a internet e tente de novo.'; }
 }
 if (!S.perfil.email) S.perfil.email = email;
+if (S.acesso && S.acesso.status === 'teste') { save(); render(); return; }
 try {
 const d = await FB.db.collection('maes').doc(u.uid).get();
 if (d.exists && d.data().dados) mesclar(JSON.parse(d.data().dados));
@@ -1821,7 +1822,7 @@ Object.assign(S, { ev, del: [...del], premium, acesso, prog, aulas });
 }
 function syncSoon() { if (!fbUser) return; clearTimeout(_syncT); _syncT = setTimeout(push, 2500); }
 function push() {
-if (!fbUser || !FB) return;
+if (!fbUser || !FB || (S.acesso && S.acesso.status === 'teste')) return;
 try {
 FB.db.collection('maes').doc(fbUser.uid).set({ dados: JSON.stringify(S), salvo: firebase.firestore.FieldValue.serverTimestamp(),
 nome: S.perfil.mae || '', bebe: S.perfil.bebe || '', nascimento: S.perfil.nasc || '', whatsapp: S.perfil.whats || '', email: fbUser.email || S.perfil.email || '',
@@ -1889,7 +1890,7 @@ ${NICHO.temas ? `<div class="fld"><label>Cor do app</label><div class="row" styl
 <button class="btn" data-a="perfilSave">Salvar</button></div>`;
 h += `<div class="sec"><h3>Conta</h3></div><div class="card">`;
 if (fbOn()) {
-h += fbUser ? `<div class="row">${ic('check')}<div class="grow"><b>Conectada</b><div class="sm mut">${esc(fbUser.email || '')} · dados salvos na nuvem</div></div></div><div class="fld mt"><label for="novaSenha">Trocar senha</label><div class="pw"><input class="inp" id="novaSenha" type="password" autocomplete="new-password" placeholder="nova senha, mínimo 6 caracteres"><button type="button" class="olho" data-a="verSenha" data-v="novaSenha" aria-label="Mostrar senha">${ic('olho')}</button></div></div><button class="btn sm" data-a="trocarSenha">Salvar nova senha</button><button class="btn ghost sm mt" data-a="logout">${ic('out', 's')} Sair da conta</button>`
+h += fbUser ? `<div class="row">${ic('check')}<div class="grow"><b>Conectada</b><div class="sm mut">${esc(fbUser.email || '')} · dados salvos na nuvem</div></div></div>${S.acesso && S.acesso.status === 'teste' ? '<p class="xs mut mt">Acesso de demonstração: seus dados ficam só neste celular.</p>' : `<div class="fld mt"><label for="novaSenha">Trocar senha</label><div class="pw"><input class="inp" id="novaSenha" type="password" autocomplete="new-password" placeholder="nova senha, mínimo 6 caracteres"><button type="button" class="olho" data-a="verSenha" data-v="novaSenha" aria-label="Mostrar senha">${ic('olho')}</button></div></div><button class="btn sm" data-a="trocarSenha">Salvar nova senha</button>`}<button class="btn ghost sm mt" data-a="logout">${ic('out', 's')} Sair da conta</button>`
 : `<p class="sm" style="margin:0 0 10px">Entre para salvar seus dados na nuvem e usar em outro celular.</p><button class="btn sm" data-a="loginSheet">Entrar ou criar senha</button>`;
 } else h += `<p class="sm" style="margin:0">Seus dados ficam salvos neste celular. Para trocar de aparelho, use o código de backup abaixo.</p>`;
 const AS = CONFIG.ASSINATURA;
