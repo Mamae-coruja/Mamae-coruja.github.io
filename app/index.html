@@ -30,7 +30,7 @@ const CONFIG = {
 APP: 'Mamãe Coruja',
 SLOGAN: 'O app da mãe de primeira viagem',
 DESCRICAO: 'Amamentação, sono, choro, vacinas, consultas e você: o app completo da mãe de primeira viagem.',
-VERSAO: '3.0.0',
+VERSAO: '3.0.1',
 LINK_VENDAS: 'https://mamae-coruja.github.io/',
 ASSINATURA: {
 preco: 'R$ 27 por mês',
@@ -38,7 +38,7 @@ link: 'https://checkout.b4you.com.br/mzcC3j6aDl',          // renovar / reativar
 linkAnual: 'https://checkout.b4you.com.br/SmOv4sYzPA',           // opcional: troca para o plano anual
 precoAnual: 'R$ 197 por ano',
 carenciaDias: 3,                                   // dias de tolerância depois do vencimento
-cancelar: 'Para cancelar, fale com o suporte pelo WhatsApp. Você continua com acesso até o fim do período pago.',
+cancelar: 'Para cancelar, responda o e-mail "Seus dados de acesso". Você continua com acesso até o fim do período pago.',
 },
 ACESSO: { modo: 'login', codigos: [] },   // login com o e-mail da compra (a B4you avisa o app pelo webhook)
 PREMIUM: {
@@ -54,8 +54,7 @@ ARQUIVOS_PWA: true,
 UTM: 'utm_source=app&utm_medium=mamaecoruja',
 GA4_ID: '',
 META_PIXEL_ID: '',
-WHATSAPP: '5500000000000',
-EMAIL: 'suporte@seudominio.com.br',
+EMAIL: '',
 LOGIN_GOOGLE: false,   // true só depois de ativar o provedor Google no Firebase
 FIREBASE: { apiKey: 'AIzaSyDCV8K3tR2cjEsG7QL83S7Own_pNLFxIlE', authDomain: 'mamae-coruja-b8727.firebaseapp.com', projectId: 'mamae-coruja-b8727', storageBucket: 'mamae-coruja-b8727.firebasestorage.app', messagingSenderId: '20101262462', appId: '1:20101262462:web:e51b4b69b85f6affaa7c2f' },
 };
@@ -2063,11 +2062,11 @@ if (m === 'login') {
 if (fbUser && fbMsg) h += `<div class="card warn"><b>Acesso não encontrado</b><p class="sm" style="margin:6px 0 10px">${esc(fbMsg)}</p><button class="btn ghost sm" data-a="logout">Entrar com outro e-mail</button></div>`;
 else h += `<h2>Entre na sua conta</h2><p class="mut">Use o e-mail da compra e a senha que enviamos para ele, na mensagem <b>"Seus dados de acesso"</b>. Não achou? Olhe no spam ou toque em "Esqueci a senha".</p><div class="mt">${vLoginForm(true)}</div>`;
 } else {
-h += `<h2>${venceu ? 'Código do mês' : 'Seu código de acesso'}</h2><p class="mut">${venceu ? 'Digite o código novo que chegou no seu e-mail depois da renovação.' : 'Ele chegou no seu e-mail ou WhatsApp junto com o link do app.'}</p><div class="fld mt"><input class="inp" id="acCode" autocomplete="off" autocapitalize="characters" placeholder="Digite o código" style="text-transform:uppercase;letter-spacing:.08em;font-weight:800;text-align:center"></div><p class="sm hide" id="acMsg" style="color:var(--red);font-weight:700"></p><button class="btn big" data-a="acCode">Entrar</button>`;
+h += `<h2>${venceu ? 'Código do mês' : 'Seu código de acesso'}</h2><p class="mut">${venceu ? 'Digite o código novo que chegou no seu e-mail depois da renovação.' : 'Ele chegou no seu e-mail junto com o link do app.'}</p><div class="fld mt"><input class="inp" id="acCode" autocomplete="off" autocapitalize="characters" placeholder="Digite o código" style="text-transform:uppercase;letter-spacing:.08em;font-weight:800;text-align:center"></div><p class="sm hide" id="acMsg" style="color:var(--red);font-weight:700"></p><button class="btn big" data-a="acCode">Entrar</button>`;
 }
 h += `<div class="c mt2"><a class="lnk" href="${esc(CONFIG.LINK_VENDAS)}" target="_blank" rel="noopener">Ainda não tem acesso? Conheça o app ${CONFIG.APP}</a></div>
 <div class="c mt"><button class="lnk" data-a="restaurar">Trocou de celular? Restaurar meus dados</button></div>
-<div class="c mt"><a class="lnk" href="https://wa.me/${CONFIG.WHATSAPP}" target="_blank" rel="noopener">Precisa de ajuda? Fale com o suporte</a></div></div></div>`;
+${CONFIG.EMAIL ? `<div class="c mt"><a class="lnk" href="mailto:${esc(CONFIG.EMAIL)}">Precisa de ajuda? ${esc(CONFIG.EMAIL)}</a></div>` : `<p class="xs mut c mt">Precisa de ajuda? Responda o e-mail "Seus dados de acesso".</p>`}</div></div>`;
 return h;
 }
 function sConta() {
@@ -2078,9 +2077,8 @@ h += `<div class="sec"><h3>Perfil</h3></div><div class="card">
 ${NICHO.sujeito.nomeLabel ? `<div class="fld"><label for="pBebe">${esc(NICHO.sujeito.nomeLabel)}</label><input class="inp" id="pBebe" value="${esc(p.bebe)}"></div>` : ''}
 ${NICHO.sujeito.dataLabel ? `<div class="fld"><label for="pNasc">${esc(NICHO.sujeito.dataLabel)}</label><input class="inp" type="date" id="pNasc" value="${esc(p.nasc)}">${IS_IOS && !p.nasc ? '<div class="datehint">Toque para escolher a data</div>' : ''}</div>` : ''}
 <div class="fld"><label for="pHora">${esc(TX.horaLabel)}</label><input class="inp" type="time" id="pHora" value="${esc(S.hora)}"></div>
-<div class="fld"><label for="pWhats">WhatsApp</label><input class="inp" id="pWhats" type="tel" inputmode="tel" value="${esc(p.whats)}" placeholder="(00) 00000-0000"></div>
 <div class="fld"><label for="pEmail">E-mail</label><input class="inp" id="pEmail" type="email" inputmode="email" value="${esc(p.email)}"></div>
-<label class="chk mb"><input type="checkbox" id="pMkt" ${p.mkt ? 'checked' : ''}> Aceito receber dicas e novidades do app ${CONFIG.APP} por WhatsApp e e-mail.</label>
+<label class="chk mb"><input type="checkbox" id="pMkt" ${p.mkt ? 'checked' : ''}> Aceito receber dicas e novidades do app ${CONFIG.APP} por e-mail.</label>
 <div class="fld"><label>Maiores desafios</label><div class="row" style="flex-wrap:wrap;gap:8px">${DESAFIOS.map(d => `<button class="pill ${S.desafios.includes(d.id) ? 'on' : ''}" data-a="desToggle" data-v="${d.id}">${esc(d.t)}</button>`).join('')}</div></div>
 ${NICHO.onb && NICHO.onb.temaOpcoes ? `<div class="fld"><label>${esc(NICHO.onb.temaTitulo)}</label><div class="row" style="flex-wrap:wrap;gap:8px">${[...NICHO.onb.temaOpcoes, { v: '', l: NICHO.onb.temaNaoSei || 'Não sei' }].map(o => `<button class="pill ${(p.sexo || '') === o.v ? 'on' : ''}" data-a="sexoBebe" data-v="${o.v}">${esc(o.l)}</button>`).join('')}</div></div>` : ''}
 ${NICHO.temas ? `<div class="fld"><label>Cor do app</label><div class="row" style="flex-wrap:wrap;gap:8px">${Object.keys(NICHO.temas).map(k => `<button class="pill ${temaChave() === k ? 'on' : ''}" data-a="corApp" data-v="${k}"><span style="width:14px;height:14px;border-radius:50%;background:${NICHO.temas[k].pri}"></span>${esc(NICHO.temas[k].nome)}</button>`).join('')}</div></div>` : ''}
@@ -2097,7 +2095,7 @@ h += `<div class="row mt"><span class="xs mut">Acesso: ${temAcesso() ? 'ativo' :
 h += `<div class="sec"><h3>Backup</h3></div><div class="card"><p class="sm" style="margin:0 0 10px">Guarde este código para recuperar tudo em outro celular ou depois de instalar o app.</p><div class="grid2"><button class="btn sm" data-a="copyBackup">${ic('copy', 's')} Copiar meu código</button><button class="btn ghost sm" data-a="restaurar">Restaurar dados</button></div></div>`;
 h += `<div class="sec"><h3>Ajuda</h3></div><div class="card">
 <div class="li" data-a="install"><span class="ico">${ic('share')}</span><div class="grow"><div class="t">Instalar na tela inicial</div><div class="d">iPhone e Android</div></div>${ic('right', 'chev')}</div>
-<a class="li" style="color:inherit;text-decoration:none" href="https://wa.me/${CONFIG.WHATSAPP}" target="_blank" rel="noopener"><span class="ico sal">${ic('phone')}</span><div class="grow"><div class="t">Suporte pelo WhatsApp</div><div class="d">${esc(CONFIG.EMAIL)}</div></div>${ic('right', 'chev')}</a>
+${CONFIG.EMAIL ? `<a class="li" style="color:inherit;text-decoration:none" href="mailto:${esc(CONFIG.EMAIL)}"><span class="ico sal">${ic('copy')}</span><div class="grow"><div class="t">Suporte por e-mail</div><div class="d">${esc(CONFIG.EMAIL)}</div></div>${ic('right', 'chev')}</a>` : `<div class="li"><span class="ico sal">${ic('copy')}</span><div class="grow"><div class="t">Suporte</div><div class="d">Responda o e-mail "Seus dados de acesso"</div></div></div>`}
 <div class="li" data-a="recomecar"><span class="ico are">${ic('book')}</span><div class="grow"><div class="t">Recomeçar o programa</div><div class="d">Volta para o dia 1 a partir de hoje</div></div>${ic('right', 'chev')}</div>
 <div class="li" data-a="apagar"><span class="ico" style="background:#F6DCD6;color:var(--red)">${ic('x')}</span><div class="grow"><div class="t" style="color:var(--red)">Apagar meus dados</div><div class="d">Remove tudo deste celular</div></div></div></div>
 <p class="xs mut c">${CONFIG.APP} ${CONFIG.VERSAO}</p>`;
@@ -2138,8 +2136,7 @@ if (st === 3) body = `<h1>${esc(O.desafioTitulo)}</h1><p class="mut">Pode escolh
 if (st === 4) body = `<h1>${esc(O.horaTitulo(p.bebe))}</h1><p class="mut">${esc(O.horaTexto)}</p><div class="row mt2" style="flex-wrap:wrap;gap:8px">${O.horas.map(h => `<button class="pill ${S.hora === h ? 'on' : ''}" data-a="onbHora" data-v="${h}">${h}</button>`).join('')}</div><div class="fld mt"><label for="oHora">Outro horário</label><input class="inp" type="time" id="oHora" value="${esc(S.hora)}"></div>`;
 if (st === 5) { const hv = S.humor[dkey()];
 body = `<h1>${esc(O.humorTitulo)}</h1><p class="mut">${esc(O.humorTexto)}</p><div class="card mt2"><div class="moods">${MOODS.map(([v, l, c]) => `<button class="mood ${hv === v ? 'on' : ''}" data-a="humor" data-v="${v}">${face(c)}${l}</button>`).join('')}</div></div>
-<div class="fld"><label for="oWhats">WhatsApp (opcional)</label><input class="inp" id="oWhats" type="tel" inputmode="tel" value="${esc(p.whats)}" placeholder="(00) 00000-0000"></div>
-<label class="chk"><input type="checkbox" id="oMkt" ${p.mkt ? 'checked' : ''}> Aceito receber dicas e novidades do app ${esc(CONFIG.APP)} por WhatsApp e e-mail.</label>`; }
+<label class="chk"><input type="checkbox" id="oMkt" ${p.mkt ? 'checked' : ''}> Aceito receber dicas e novidades do app ${esc(CONFIG.APP)} por e-mail.</label>`; }
 if (st === 6) return `<div class="onb"><div class="prep"><div class="spin"></div><h2>Preparando sua rotina</h2><div class="ln" id="pl1">Calculando a sua fase</div><div class="ln" id="pl2">Montando a rotina do dia</div><div class="ln" id="pl3">Separando as dicas para a idade</div></div></div>`;
 if (st === 7) {
 const f = fase(), rit = rotinaHoje().find(r => r.id === O.ritualId), des = DESAFIOS.filter(d => S.desafios.includes(d.id));
@@ -2391,7 +2388,7 @@ const i = S.desafios.indexOf(v); if (i >= 0) S.desafios.splice(i, 1); else S.des
 if (S.onb) el.classList.toggle('on'); else render();
 },
 perfilSave() {
-Object.assign(S.perfil, { mae: val('pMae').trim(), bebe: val('pBebe').trim(), nasc: val('pNasc'), whats: val('pWhats').trim(), email: val('pEmail').trim(), mkt: !!($('#pMkt') || {}).checked });
+Object.assign(S.perfil, { mae: val('pMae').trim(), bebe: val('pBebe').trim(), nasc: val('pNasc'), email: val('pEmail').trim(), mkt: !!($('#pMkt') || {}).checked });
 if (val('pHora')) S.hora = val('pHora'); save(); toast('Dados salvos'); render();
 },
 loginSheet() { fbMsg = ''; abrirSheet(`<h2>Entrar</h2><p class="mut sm">Seus dados ficam salvos na nuvem e aparecem em qualquer celular.</p><div class="mt">${vLoginForm(false)}</div>`); fbInit(); },
@@ -2450,13 +2447,13 @@ if (id === 'sujeito') { S.perfil.bebe = val('oBebe').trim(); S.perfil.nasc = val
 if (NICHO.sujeito.dataLabel && !S.perfil.nasc) { save(); return toast('Informe a data de nascimento (ou a data prevista do parto)'); } }
 if (id === 'desafio' && !S.desafios.length) return toast('Escolha pelo menos um');
 if (id === 'hora' && val('oHora')) S.hora = val('oHora');
-if (id === 'humor') { S.perfil.whats = val('oWhats').trim(); S.perfil.mkt = !!($('#oMkt') || {}).checked; }
+if (id === 'humor') { S.perfil.mkt = !!($('#oMkt') || {}).checked; }
 save(); U.onb = i + 1; saveU(); render(); topo();
 },
 onbBack() { if (passosOnb()[(U.onb || 0) - 1] === 'hora' && val('oHora')) S.hora = val('oHora'); U.onb = Math.max(0, (U.onb || 0) - 1); saveU(); render(); },
 onbTema(v) { S.perfil.sexo = v; S.perfil.cor = ''; save(); aplicarTema(); setupPWA(); U.onb = (U.onb || 0) + 1; saveU(); render(); topo(); },
-sexoBebe(v) { if ($('#pMae')) Object.assign(S.perfil, { mae: val('pMae').trim(), bebe: val('pBebe').trim(), nasc: val('pNasc'), whats: val('pWhats').trim(), email: val('pEmail').trim() }); S.perfil.sexo = v; S.perfil.cor = ''; save(); aplicarTema(); setupPWA(); render(); },
-corApp(v) { if ($('#pMae')) Object.assign(S.perfil, { mae: val('pMae').trim(), bebe: val('pBebe').trim(), nasc: val('pNasc'), whats: val('pWhats').trim(), email: val('pEmail').trim() }); S.perfil.cor = v; save(); aplicarTema(); setupPWA(); render(); },
+sexoBebe(v) { if ($('#pMae')) Object.assign(S.perfil, { mae: val('pMae').trim(), bebe: val('pBebe').trim(), nasc: val('pNasc'), email: val('pEmail').trim() }); S.perfil.sexo = v; S.perfil.cor = ''; save(); aplicarTema(); setupPWA(); render(); },
+corApp(v) { if ($('#pMae')) Object.assign(S.perfil, { mae: val('pMae').trim(), bebe: val('pBebe').trim(), nasc: val('pNasc'), email: val('pEmail').trim() }); S.perfil.cor = v; save(); aplicarTema(); setupPWA(); render(); },
 onbHora(v) { S.hora = v; save(); render(); },
 onbFim() { S.onb = true; S.inicio = dkey(); save(); U.onb = 0; U.tab = 'hoje'; U.stack = []; saveU(); track('onboarding_completo'); render(); topo(); },
 };
