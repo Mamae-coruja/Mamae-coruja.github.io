@@ -42,10 +42,10 @@ cancelar: 'Para cancelar, fale com o suporte pelo WhatsApp. Você continua com a
 },
 ACESSO: { modo: 'login', codigos: [] },   // login com o e-mail da compra (a B4you avisa o app pelo webhook)
 PREMIUM: {
-vigia:       { preco: 'R$ 24,90', link: 'https://checkout.b4you.com.br/c1rCeVAoAJ',        codigos: [] },
-voz:         { preco: 'R$ 19,90', link: 'https://checkout.b4you.com.br/oV2Rc2NyKl',          codigos: [] },
-cartao:      { preco: 'R$ 17,90', link: 'https://checkout.b4you.com.br/0bQ_z78x7C',  codigos: [] },
-imprimir:    { preco: 'R$ 14,90', link: 'https://checkout.b4you.com.br/qRO5ZMNR9e', codigos: [] },
+vigia:       { incluso: true, preco: 'R$ 24,90', link: 'https://checkout.b4you.com.br/c1rCeVAoAJ',        codigos: [] },
+voz:         { incluso: true, preco: 'R$ 19,90', link: 'https://checkout.b4you.com.br/oV2Rc2NyKl',          codigos: [] },
+cartao:      { incluso: true, preco: 'R$ 17,90', link: 'https://checkout.b4you.com.br/0bQ_z78x7C',  codigos: [] },
+imprimir:    { incluso: true, preco: 'R$ 14,90', link: 'https://checkout.b4you.com.br/qRO5ZMNR9e', codigos: [] },
 plano:       { preco: 'R$ 67',    link: 'https://checkout.b4you.com.br/kVLL-hjSgg',        codigos: [] },
 },
 CODIGO_TUDO: 'CORUJA-HFS4QK',
@@ -1020,6 +1020,7 @@ let baixos = 0; for (let i = 0; i < 5; i++) { const h = S.humor[addDays(dkey(), 
 return baixos >= 3;
 }
 function temPremium(id) {
+if ((CONFIG.PREMIUM[id] || {}).incluso) return true;   // incluída na assinatura
 if (S.premium.includes(id) || S.premium.includes('tudo')) return true;
 const m = (typeof MODULOS !== 'undefined') && MODULOS.find(x => x.id === id);
 return !!(m && (m.incluso || (m.pacote && S.premium.includes(m.pacote))));
