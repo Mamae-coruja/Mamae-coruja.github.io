@@ -276,6 +276,48 @@ em{font-style:italic;color:inherit}
 .selo h3{color:#fff;margin-bottom:6px}
 .selo p{margin:0;color:#C9D1E8}
 
+/* ===== DORES → SOLUÇÕES ===== */
+.dores-s{padding:100px 0;background:linear-gradient(180deg,#FFF8F1,#FCEEF3)}
+.dores{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1040px;margin:46px auto 0}
+.dor{background:#fff;border:1px solid var(--line);border-radius:28px;padding:24px 24px 22px;box-shadow:0 14px 34px rgba(30,39,66,.06);display:flex;flex-direction:column}
+.dor.com-img{display:grid;grid-template-columns:1fr 150px;gap:18px;align-items:center;overflow:hidden;padding-bottom:0}
+.dor.com-img .dor-t{padding-bottom:22px}
+.dor.com-img .ph{width:150px;margin:0 0 -40px;align-self:end;transform:rotate(3deg)}
+.dor-n{font:800 12px var(--sans);letter-spacing:.12em;color:var(--rosa2)}
+.dor h3{font:600 italic clamp(20px,3.6vw,23px)/1.25 var(--serif);margin:6px 0 6px;color:var(--ink)}
+.dor-s{margin:0 0 12px;color:var(--mut);font-size:15.5px}
+.dor-r{margin:0;padding:12px 14px;border-radius:16px;background:#F1F8F3;color:#24533A;font-size:15.5px;line-height:1.45}
+.dor-r b{color:#14804F}
+.seta-r{color:#14804F;font-weight:900;margin-right:6px}
+@media(max-width:860px){.dores{grid-template-columns:1fr}.dor.com-img{grid-template-columns:1fr 112px;gap:12px}.dor.com-img .ph{width:112px}}
+/* ===== PRESENTES DO ANUAL ===== */
+.presentes{max-width:1040px;margin:56px auto 0;text-align:center}
+.pres-h{color:#fff;font:600 clamp(25px,5vw,34px)/1.2 var(--serif);max-width:760px;margin:10px auto 0}
+.pres-h em{color:var(--lua);font-style:italic}
+.pres-sub{color:#C9D1E8;margin:12px auto 0;max-width:600px}
+.pres-g{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px;text-align:left}
+.pres{background:linear-gradient(170deg,#FFFBEF,#fff 60%);border:2px solid #F1C76A;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.pres-img{height:170px;overflow:hidden;background:linear-gradient(160deg,#FFE9B8,#F8D1DC);display:flex;justify-content:center;padding-top:14px}
+.pres-img img{width:72%;height:auto;border-radius:16px 16px 0 0;box-shadow:0 10px 24px rgba(30,39,66,.2);object-fit:cover;object-position:top}
+.pres-t{padding:14px 14px 16px;color:var(--ink);display:flex;flex-direction:column;gap:4px;flex:1}
+.pres-tag{font:900 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#9A6400}
+.pres h3{font-size:17px;margin:0}
+.pres p{margin:0;font-size:13.5px;color:var(--mut);line-height:1.4;flex:1}
+.pres-v{font:800 12.5px var(--sans);color:var(--mut);margin-top:6px}
+.pres-v s{color:#D64545;text-decoration-thickness:2px;white-space:nowrap}
+@media(max-width:980px){.pres-g{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.pres-g{grid-template-columns:1fr 1fr;gap:10px}.pres-img{height:130px}.pres:last-child{grid-column:1/-1}.pres:last-child .pres-img{height:150px}}
+/* ===== PLANOS (complementos) ===== */
+.plano .para{margin:2px 0 0;font:800 13.5px var(--sans);color:var(--rosa2);letter-spacing:.01em}
+.plano.dest .para{color:#B06A00}
+.plano .cmp{display:block;margin-top:2px;color:#14804F;font-weight:800}
+.plano .gift{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:10px 0 0;padding:10px 12px;border-radius:14px;background:linear-gradient(120deg,#FFF3D1,#FFE6A8);border:1.5px dashed #E9B649;font-size:14.5px}
+.plano .gift b{color:#6B4300}.plano .gift span{font:800 13px var(--sans);color:#9A6400;white-space:nowrap}
+.plano .gift.vazio{background:#F4F1EC;border-color:#E2DDD5}.plano .gift.vazio b,.plano .gift.vazio span{color:#9A92A6;font-weight:700}
+.plano .gift-l{list-style:none;padding:8px 2px 2px;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.plano .gift-l li{font:800 12.5px var(--sans);background:#FFF8E6;color:#7A5200;border:1px solid #F1D79A;padding:5px 9px;border-radius:99px}
+.plano .gift-l li:before{content:'🎁 '}
+
 /* ===== 9. PARA QUEM / FAQ ===== */
 .quem{padding:100px 0}
 .faq{padding:0 0 100px}
@@ -380,7 +422,7 @@ html,body{background:var(--dia)!important;font-family:var(--sans)!important}
 <section class="up"><div class="w grid">
  <div><span class="alerta">Só para quem escolheu o mensal</span>
   <h1>O primeiro ano dele só acontece uma vez. Garanta o ano inteiro.</h1>
-  <p class="lead">O mês a mês vai até o primeiro aniversário. No plano anual, você não pensa mais em mensalidade, não corre o risco de perder o acesso no meio do caminho e ainda <b>paga bem menos</b> pelo ano inteiro.</p>
+  <p class="lead">O mês a mês vai até o primeiro aniversário. No plano anual, você não pensa mais em mensalidade, não corre o risco de perder o acesso no meio do caminho, <b>paga bem menos</b> pelo ano inteiro e ainda ganha <b>5 presentes</b>: Coruja de Plantão, Voz da Mamãe, Mesversário, Minha Rotina Impressa e o Plano de Sono Personalizado.</p>
   <a class="cta" href="#preco"><span>Quero garantir o ano inteiro</span><small>veja quanto você economiza</small></a>
  </div>
  <figure class="ph "><div class="fr"><div class="sc"><div class="sb"><b>9:41</b><i class="il"></i><span class="bt"></span></div><img src="img/mes.jpg" alt="Mês a mês do primeiro ano" width="585" height="1266" loading="lazy"></div></div></figure>
@@ -389,10 +431,11 @@ html,body{background:var(--dia)!important;font-family:var(--sans)!important}
  <div class="box"><table class="cmp"><tr><th></th><th>Mensal</th><th>Anual</th></tr>
  <tr><td>Por mês</td><td>R$ 27</td><td>R$ 16,42</td></tr>
  <tr><td>Em 12 meses</td><td>R$ 324</td><td>R$ 197</td></tr>
+ <tr><td>Presentes (ferramentas extras)</td><td>—</td><td>5, valem R$ 104,60</td></tr>
  <tr class="eco"><td><b>Você economiza</b></td><td>—</td><td>R$ 127</td></tr></table>
  <p class="xs mut" style="margin:10px 0 0">Você já pagou o primeiro mês. Para completar o ano, faltam R$ 170, em um pagamento só. A cobrança mensal é encerrada.</p></div>
  <div class="emo" style="margin-top:30px"><svg class="stars" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff"><circle cx="474" cy="191" r="1.2" opacity="0.5"/><circle cx="190" cy="3" r="1.2" opacity="0.9"/><circle cx="619" cy="41" r="1.2" opacity="0.35"/><circle cx="745" cy="194" r="1" opacity="0.9"/><circle cx="742" cy="216" r="1" opacity="0.5"/><circle cx="243" cy="26" r="0.8" opacity="0.5"/><circle cx="518" cy="32" r="1.6" opacity="0.35"/><circle cx="298" cy="104" r="1" opacity="0.9"/><circle cx="89" cy="136" r="1" opacity="0.9"/><circle cx="287" cy="174" r="0.8" opacity="0.5"/><circle cx="725" cy="2" r="1.6" opacity="0.35"/><circle cx="387" cy="251" r="1" opacity="0.35"/><circle cx="242" cy="217" r="0.8" opacity="0.35"/><circle cx="124" cy="296" r="1" opacity="0.5"/><circle cx="338" cy="4" r="0.8" opacity="0.5"/><circle cx="552" cy="8" r="2" opacity="0.35"/><circle cx="586" cy="254" r="2" opacity="0.5"/><circle cx="430" cy="35" r="1.6" opacity="0.5"/><circle cx="654" cy="47" r="2" opacity="0.5"/><circle cx="176" cy="21" r="0.8" opacity="0.7"/><circle cx="568" cy="76" r="1.2" opacity="0.35"/><circle cx="124" cy="206" r="1" opacity="0.5"/><circle cx="625" cy="258" r="0.8" opacity="0.7"/><circle cx="690" cy="267" r="2" opacity="0.35"/><circle cx="355" cy="56" r="2" opacity="0.7"/><circle cx="462" cy="107" r="1.6" opacity="0.5"/><circle cx="588" cy="9" r="1.6" opacity="0.7"/><circle cx="0" cy="221" r="0.8" opacity="0.5"/><circle cx="227" cy="227" r="1.2" opacity="0.7"/><circle cx="90" cy="157" r="1.2" opacity="0.35"/><circle cx="529" cy="28" r="0.8" opacity="0.9"/><circle cx="799" cy="286" r="1.6" opacity="0.9"/><circle cx="354" cy="127" r="2" opacity="0.35"/><circle cx="435" cy="118" r="0.8" opacity="0.9"/><circle cx="522" cy="190" r="2" opacity="0.7"/><circle cx="142" cy="148" r="1" opacity="0.7"/><circle cx="30" cy="25" r="1" opacity="0.7"/><circle cx="168" cy="61" r="2" opacity="0.5"/><circle cx="12" cy="24" r="0.8" opacity="0.9"/><circle cx="213" cy="199" r="1.2" opacity="0.35"/><circle cx="363" cy="145" r="1" opacity="0.9"/><circle cx="575" cy="142" r="1" opacity="0.35"/><circle cx="765" cy="284" r="1.2" opacity="0.35"/><circle cx="67" cy="215" r="1.6" opacity="0.5"/><circle cx="720" cy="287" r="1.6" opacity="0.5"/><circle cx="679" cy="140" r="2" opacity="0.9"/><circle cx="357" cy="50" r="0.8" opacity="0.7"/><circle cx="541" cy="65" r="1" opacity="0.35"/><circle cx="166" cy="113" r="0.8" opacity="0.5"/><circle cx="180" cy="242" r="1.6" opacity="0.9"/></g></svg><p>Do primeiro sorriso aos primeiros passos, das vacinas dos 2 meses à papinha dos 6: <b>doze meses que nunca mais voltam</b>. Viva cada um deles com o app do seu lado.</p></div>
- <ul class="chk"><li>12 meses de conteúdo, liberados pela idade</li><li>Agenda de vacinas e consultas até 1 ano</li><li>Primeiras vezes guardadas, do sorriso aos passos</li><li>Todas as novidades do app no período</li></ul>
+ <ul class="chk"><li>12 meses de conteúdo, liberados pela idade</li><li>5 presentes liberados na hora: Coruja de Plantão, Voz da Mamãe, Mesversário, Rotina Impressa e Plano de Sono</li><li>Agenda de vacinas e consultas até 1 ano</li><li>Primeiras vezes guardadas, do sorriso aos passos</li><li>Todas as novidades do app no período</li></ul>
 </div></section>
 <section style="padding:30px 0 90px"><div class="w"><div class="caixa">
  <span class="tag2">Economize R$ 127</span>
@@ -412,7 +455,7 @@ html,body{background:var(--dia)!important;font-family:var(--sans)!important}
 <script>
 let upsellOffer = "7th6zXUk8M";
 let upsellPlan = "";
-let acceptUpsellURL = "https://mamae-coruja.github.io/upsell-plano";
+let acceptUpsellURL = "https://mamae-coruja.github.io/obrigado";
 let refuseUpsellURL = "https://mamae-coruja.github.io/upsell-plano";
 let deliveryURL = "https://checkout.b4you.com.br/compra-realizada";
 let oneClick = true;
@@ -421,6 +464,6 @@ let oneClick = true;
 <footer class="foot"><p>Mamãe Coruja é um app de apoio à rotina e não substitui o acompanhamento pediátrico e médico.</p>
 <p>© Mamãe Coruja App · <a href="termos">Termos de uso</a> · <a href="privacidade">Política de privacidade</a></p></footer><script>
 /* Botões da página → botões do script da B4you. Na pré-visualização (sem o código da B4you), seguem para a próxima página. */
-function aceitar(){var b=document.getElementById('acceptUpsell');if(b){b.click();}else{location.href='https://mamae-coruja.github.io/upsell-plano';}}
+function aceitar(){var b=document.getElementById('acceptUpsell');if(b){b.click();}else{location.href='https://mamae-coruja.github.io/obrigado';}}
 function recusar(){var b=document.getElementById('refuseUpsell');if(b){b.click();}else{location.href='https://mamae-coruja.github.io/upsell-plano';}}
 </script></body></html>
