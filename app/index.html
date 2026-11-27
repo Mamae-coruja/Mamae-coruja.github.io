@@ -30,7 +30,7 @@ const CONFIG = {
 APP: 'Mamãe Coruja',
 SLOGAN: 'O app da mãe de primeira viagem',
 DESCRICAO: 'Amamentação, sono, choro, vacinas, consultas e você: o app completo da mãe de primeira viagem.',
-VERSAO: '2.1.1',
+VERSAO: '2.1.2',
 LINK_VENDAS: 'https://mamae-coruja.github.io/',
 ASSINATURA: {
 preco: 'R$ 27 por mês',
@@ -934,6 +934,7 @@ return r;
 }
 function readLS(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } }
 let S = fixS(readLS(KEY));
+if ((S.v || 1) < VERSAO_DADOS) S = novoS();   // dados de teste de versões antigas: recomeça com o cadastro
 let U = Object.assign({ tab: 'hoje', stack: [], onb: 0, guided: null, night: false, som: null, dia: null, rotAberta: null }, readLS(UKEY) || {});
 if (!Array.isArray(U.stack)) U.stack = [];
 const DEMO = (typeof window !== 'undefined' && window.DEMO) || null;
