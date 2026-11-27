@@ -158,7 +158,8 @@ em{font-style:italic;color:inherit}
 .futuro .cards{position:relative;height:520px}
 .futuro .cards .cartao{position:absolute;width:62%;right:2%;top:0;border-radius:18px;box-shadow:0 24px 50px rgba(30,39,66,.22);transform:rotate(5deg)}
 .futuro .cards .ph{position:absolute;width:52%;left:2%;bottom:0;transform:rotate(-4deg)}
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.duo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+@media(max-width:560px){.duo div{flex-direction:column;align-items:flex-start;padding:14px;gap:8px;font-size:15px}}
 .duo div{border-radius:22px;padding:18px;color:#fff;display:flex;align-items:center;gap:12px;font-weight:800}
 .duo svg{width:42px;height:42px;border-radius:12px;flex:0 0 auto;background:rgba(255,255,255,.2)}
 
@@ -375,7 +376,7 @@ html,body{background:var(--dia)!important;font-family:var(--sans)!important}
 #modal-upsell-container:not(.mostrar){display:none!important}
 #modal-upsell-container,#modal-upsell-container *{font-family:var(--sans)!important}
 #modal-upsell-container [class*="modal"],#modal-upsell-container>div{min-width:0!important;max-width:94vw!important}
-</style></head><body><div class="okbar">✓ Pedido confirmado! Seu acesso já está a caminho do seu e-mail e WhatsApp.</div><div class="passos"><span class="ok">✓ Pedido</span><span class="on">Oferta</span><span class="">Concluído</span></div>
+</style></head><body><div class="okbar">✓ Pedido confirmado! Seu acesso já está a caminho do seu e-mail.</div><div class="passos"><span class="ok">✓ Pedido</span><span class="on">Oferta</span><span class="">Concluído</span></div>
 <section class="up"><div class="w grid">
  <div><span class="alerta">Só para quem escolheu o mensal</span>
   <h1>O primeiro ano dele só acontece uma vez. Garanta o ano inteiro.</h1>
