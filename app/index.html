@@ -30,7 +30,7 @@ const CONFIG = {
 APP: 'Mamãe Coruja',
 SLOGAN: 'O app da mãe de primeira viagem',
 DESCRICAO: 'Amamentação, sono, choro, vacinas, consultas e você: o app completo da mãe de primeira viagem.',
-VERSAO: '2.1.0',
+VERSAO: '2.1.1',
 LINK_VENDAS: 'https://mamae-coruja.github.io/',
 ASSINATURA: {
 preco: 'R$ 27 por mês',
@@ -978,7 +978,8 @@ r.onerror = () => res(null);
 async function idbSet(v) { const db = await idb(); if (!db) return; try { db.transaction('kv', 'readwrite').objectStore('kv').put(JSON.parse(JSON.stringify(v)), 'S'); } catch (e) {} }
 async function idbGet() { const db = await idb(); if (!db) return null; return new Promise(res => { try { const r = db.transaction('kv').objectStore('kv').get('S'); r.onsuccess = () => res(r.result || null); r.onerror = () => res(null); } catch (e) { res(null); } }); }
 async function restoreIDB() {
-const v = await idbGet();
+let v = await idbGet();
+if (v && (v.v || 1) < VERSAO_DADOS) v = null;   // cópia de uma versão antiga (testes): ignora
 if (v && (v.upd || 0) > (S.upd || 0)) { S = fixS(v); try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} render(); }
 else if (!v && S.upd) idbSet(S);
 }
